@@ -1,7 +1,0 @@
-#ignore file
-
-#ignore .o and .a file
-*.[oa]
-
-#ignore .exe file
-*.exe
