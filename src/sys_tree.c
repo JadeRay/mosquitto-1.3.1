@@ -199,6 +199,7 @@ void mqtt3_db_sys_update(struct mosquitto_db *db, int interval, time_t start_tim
 	if(interval && now - interval > last_update){
 		uptime = now - start_time;
 		snprintf(buf, BUFLEN, "%d seconds", (int)uptime);
+		//uptime means how long has the broker woked
 		mqtt3_db_messages_easy_queue(db, NULL, "$SYS/broker/uptime", 2, strlen(buf), buf, 1);
 
 		_sys_update_clients(db, buf);

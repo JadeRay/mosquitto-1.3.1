@@ -256,6 +256,7 @@ int mosquitto_main_loop(struct mosquitto_db *db, int *listensock, int listensock
 			loop_handle_reads_writes(db, pollfds);
 
 			for(i=0; i<listensock_count; i++){
+				//POLLPRI: high priority data to read
 				if(pollfds[i].revents & (POLLIN | POLLPRI)){
 					while(mqtt3_socket_accept(db, listensock[i]) != -1){
 					}

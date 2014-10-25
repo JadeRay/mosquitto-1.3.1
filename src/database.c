@@ -864,7 +864,7 @@ int mqtt3_db_message_write(struct mosquitto *context)
 
 	return MOSQ_ERR_SUCCESS;
 }
-
+//function: clean msg if ref_count = 0
 void mqtt3_db_store_clean(struct mosquitto_db *db)
 {
 	/* FIXME - this may not be necessary if checks are made when messages are removed. */

@@ -845,6 +845,7 @@ int _mosquitto_packet_read(struct mosquitto *mosq)
 	if(!mosq->in_packet.command){
 		read_length = _mosquitto_net_read(mosq, &byte, 1);
 		if(read_length == 1){
+			// 
 			mosq->in_packet.command = byte;
 #ifdef WITH_BROKER
 #  ifdef WITH_SYS_TREE
@@ -878,7 +879,11 @@ int _mosquitto_packet_read(struct mosquitto *mosq)
 				/* Max 4 bytes length for remaining length as defined by protocol.
 				 * Anything more likely means a broken/malicious client.
 				 */
-				if(mosq->in_packet.remaining_count > 4) return MOSQ_ERR_PROTOCOL;
+				if(mosq->in_packet.remaining_count > 4)
+				{
+					// A broken/malicious client. Maybe we can do something here not just return.
+					return MOSQ_ERR_PROTOCOL;
+				}
 
 #if defined(WITH_BROKER) && defined(WITH_SYS_TREE)
 				g_bytes_received++;
