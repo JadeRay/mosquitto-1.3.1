@@ -53,6 +53,18 @@ int g_clients_expired = 0;
 unsigned int g_socket_connections = 0;
 unsigned int g_connection_count = 0;
 
+#ifdef modify
+uint64_t g_protect_err_protocol = 0;
+uint64_t g_protect_conn_freq = 0;
+uint64_t g_protect_err_topic = 0;
+uint64_t g_protect_pub_freq = 0;
+//maybe we should distinguish qos 0,1,2
+uint64_t g_protect_pub_freq_0 = 0;
+uint64_t g_protect_pub_freq_1 = 0;
+uint64_t g_protect_pub_freq_2 = 0;
+
+#endif
+
 static void _sys_update_clients(struct mosquitto_db *db, char *buf)
 {
 	static unsigned int client_count = -1;
@@ -154,6 +166,27 @@ void mqtt3_db_sys_update(struct mosquitto_db *db, int interval, time_t start_tim
 	static int subscription_count = -1;
 	static int retained_count = -1;
 
+#ifdef modify
+	static unsigned long protect_err_protocol = 0;
+	static unsigned long protect_err_topic = 0;
+	static unsigned long protect_conn_freq = 0;
+	static unsigned long protect_pub_freq = 0;
+	static unsigned long protect_pub_freq_0 = 0;
+	static unsigned long protect_pub_freq_1 = 0;
+	static unsigned long protect_pub_freq_2 = 0;
+
+	double protect_err_protocol_interval, protect_err_topic_interval , protect_conn_freq_interval;
+	double protect_pub_freq_interval, protect_pub_freq_0_interval, protect_pub_freq_1_interval, protect_pub_freq_2_interval;
+
+	static double protect_err_protocol_load1 = 0;
+	static double protect_err_topic_load1 = 0;
+	static double protect_conn_freq_load1 = 0;
+	static double protect_pub_freq_load1 = 0;
+	static double protect_pub_freq_0_load1 = 0;
+	static double protect_pub_freq_1_load1 = 0;
+	static double protect_pub_freq_2_load1 = 0;	
+#endif
+	//__load means the last value of corresponding topic
 	static double msgs_received_load1 = 0;
 	static double msgs_received_load5 = 0;
 	static double msgs_received_load15 = 0;
@@ -221,6 +254,23 @@ void mqtt3_db_sys_update(struct mosquitto_db *db, int interval, time_t start_tim
 			connection_interval = g_connection_count*i_mult;
 			g_connection_count = 0;
 
+#ifdef modify
+			protect_err_protocol_interval = (g_protect_err_protocol - protect_err_protocol)*i_mult;
+			protect_err_protocol = g_protect_err_protocol;
+			protect_err_topic_interval = (g_protect_err_topic - protect_err_topic) * i_mult;
+			protect_err_topic = g_protect_err_topic;
+			protect_conn_freq_interval = (g_protect_conn_freq - protect_conn_freq) * i_mult;
+			protect_conn_freq = g_protect_conn_freq;
+			protect_pub_freq_interval = (g_protect_pub_freq - protect_pub_freq) * i_mult;
+			protect_pub_freq = g_protect_pub_freq;
+			protect_pub_freq_0_interval = (g_protect_pub_freq_0 - protect_pub_freq_0) * i_mult;
+			protect_pub_freq_0 = g_protect_pub_freq_0;
+			protect_pub_freq_1_interval = (g_protect_pub_freq_1 - protect_pub_freq_1) * i_mult;
+			protect_pub_freq_1 = g_protect_pub_freq_1;
+			protect_pub_freq_2_interval = (g_protect_pub_freq_2 - protect_pub_freq_2) * i_mult;
+			protect_pub_freq_2 = g_protect_pub_freq_2;
+#endif
+
 			/* 1 minute load */
 			exponent = exp(-1.0*(now-last_update)/60.0);
 
@@ -233,6 +283,15 @@ void mqtt3_db_sys_update(struct mosquitto_db *db, int interval, time_t start_tim
 			calc_load(db, buf, "$SYS/broker/load/bytes/sent/1min", exponent, bytes_sent_interval, &bytes_sent_load1);
 			calc_load(db, buf, "$SYS/broker/load/sockets/1min", exponent, socket_interval, &socket_load1);
 			calc_load(db, buf, "$SYS/broker/load/connections/1min", exponent, connection_interval, &connection_load1);
+#ifdef modify
+			calc_load(db, buf, "$SYS/broker/load/protect/err_protocol/1min", exponent, protect_err_protocol_interval, &protect_err_protocol_load1);
+			calc_load(db, buf, "$SYS/broker/load/protect/err_topic/1min", exponent, protect_err_topic_interval, &protect_err_topic_load1);
+			calc_load(db, buf, "$SYS/broker/load/protect/conn_freq/1min", exponent, protect_conn_freq_interval, &protect_conn_freq_load1);
+			calc_load(db, buf, "$SYS/broker/load/protect/pub_freq/1min", exponent, protect_pub_freq_interval, &protect_pub_freq_load1);
+			calc_load(db, buf, "$SYS/broker/load/protect/pub_freq_0/1min", exponent, protect_pub_freq_0_interval, &protect_pub_freq_0_load1);
+			calc_load(db, buf, "$SYS/broker/load/protect/pub_freq_1/1min", exponent, protect_pub_freq_1_interval, &protect_pub_freq_1_load1);
+			calc_load(db, buf, "$SYS/broker/load/protect/pub_freq_2/1min", exponent, protect_pub_freq_2_interval, &protect_pub_freq_2_load1);
+#endif
 
 			/* 5 minute load */
 			exponent = exp(-1.0*(now-last_update)/300.0);

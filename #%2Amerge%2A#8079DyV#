@@ -1294,16 +1294,6 @@ g_connection_count	src/sys_tree.c	/^unsigned int g_connection_count = 0;$/;"	v
 g_msgs_dropped	src/sys_tree.c	/^unsigned long g_msgs_dropped = 0;$/;"	v
 g_msgs_received	src/sys_tree.c	/^unsigned long g_msgs_received = 0;$/;"	v
 g_msgs_sent	src/sys_tree.c	/^unsigned long g_msgs_sent = 0;$/;"	v
-<<<<<<< HEAD
-=======
-g_protect_conn_freq	src/sys_tree.c	/^uint64_t g_protect_conn_freq = 0;$/;"	v
-g_protect_err_protocol	src/sys_tree.c	/^uint64_t g_protect_err_protocol = 0;$/;"	v
-g_protect_err_topic	src/sys_tree.c	/^uint64_t g_protect_err_topic = 0;$/;"	v
-g_protect_pub_freq	src/sys_tree.c	/^uint64_t g_protect_pub_freq = 0;$/;"	v
-g_protect_pub_freq_0	src/sys_tree.c	/^uint64_t g_protect_pub_freq_0 = 0;$/;"	v
-g_protect_pub_freq_1	src/sys_tree.c	/^uint64_t g_protect_pub_freq_1 = 0;$/;"	v
-g_protect_pub_freq_2	src/sys_tree.c	/^uint64_t g_protect_pub_freq_2 = 0;$/;"	v
->>>>>>> centos_in_lab
 g_pub_bytes_received	src/sys_tree.c	/^uint64_t g_pub_bytes_received = 0;$/;"	v
 g_pub_bytes_sent	src/sys_tree.c	/^uint64_t g_pub_bytes_sent = 0;$/;"	v
 g_pub_msgs_received	src/sys_tree.c	/^unsigned long g_pub_msgs_received = 0;$/;"	v
@@ -2658,10 +2648,6 @@ print_usage	client/sub_client.c	/^void print_usage(void)$/;"	f
 print_usage	src/conf.c	/^static void print_usage(void)$/;"	f	file:
 print_usage	src/mosquitto_passwd.c	/^void print_usage(void)$/;"	f
 protocol	lib/mosquitto_internal.h	/^	enum _mosquitto_protocol protocol;$/;"	m	struct:mosquitto	typeref:enum:mosquitto::_mosquitto_protocol
-<<<<<<< HEAD
-=======
-protocol_check	lib/read_handle.c	/^bool protocol_check(void* payload, char* payload_pattern, int len)$/;"	f
->>>>>>> centos_in_lab
 psk_client_callback	lib/net_mosq.c	/^static unsigned int psk_client_callback(SSL *ssl, const char *hint,$/;"	f	file:
 psk_file	src/mosquitto_broker.h	/^	char *psk_file;$/;"	m	struct:mqtt3_config
 psk_hint	src/mosquitto_broker.h	/^	char *psk_hint;$/;"	m	struct:_mqtt3_listener
@@ -3998,10 +3984,6 @@ topic	src/mosquitto_broker.h	/^	char *topic;$/;"	m	struct:_mosquitto_subhier
 topic	src/mosquitto_broker.h	/^	char *topic;$/;"	m	struct:_mqtt3_bridge_topic
 topic	src/subs.c	/^	char *topic;$/;"	m	struct:_sub_token	file:
 topic	test/qos.c	/^	char *topic;$/;"	m	struct:sub	file:
-<<<<<<< HEAD
-=======
-topic_check	lib/read_handle.c	/^bool topic_check(char* topic, char* topic_pattern, int len)$/;"	f
->>>>>>> centos_in_lab
 topic_count	client/sub_client.c	/^	int topic_count;$/;"	m	struct:userdata	file:
 topic_count	src/mosquitto_broker.h	/^	int topic_count;$/;"	m	struct:_mqtt3_bridge
 topic_matches_sub	lib/cpp/mosquittopp.cpp	/^int topic_matches_sub(const char *sub, const char *topic, bool *result)$/;"	f	namespace:mosqpp

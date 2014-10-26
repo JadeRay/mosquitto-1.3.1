@@ -20,6 +20,10 @@
 # password authentication at all.
 WITH_TLS:=no
 
+# Comment out to convert mosquitto to the original version, which is mosquitto-1.3.1.
+# This variable means a change by myself.
+modify:=yes
+
 # Comment out to disable TLS/PSK support in the broker and client. Requires
 # WITH_TLS=yes.
 # This must be disabled if using openssl < 1.0.
@@ -185,6 +189,10 @@ endif
 
 ifeq ($(WITH_PERSISTENCE),yes)
 	BROKER_CFLAGS:=$(BROKER_CFLAGS) -DWITH_PERSISTENCE
+endif
+
+ifeq ($(modify), yes)
+	BROKER_CFLAGS:=$(BROKER_CFLAGS) -Dmodify
 endif
 
 ifeq ($(WITH_MEMORY_TRACKING),yes)

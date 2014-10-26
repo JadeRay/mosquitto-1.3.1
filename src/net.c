@@ -74,6 +74,9 @@ static int tls_ex_index_listener = -1;
 
 #ifdef WITH_SYS_TREE
 extern unsigned int g_socket_connections;
+#   ifdef modify
+extern uint64_t g_protect_conn_freq;
+#   endif
 #endif
 
 int mqtt3_socket_accept(struct mosquitto_db *db, int listensock)

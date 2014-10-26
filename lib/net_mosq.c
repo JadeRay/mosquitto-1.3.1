@@ -77,6 +77,10 @@ POSSIBILITY OF SUCH DAMAGE.
    extern unsigned long g_msgs_sent;
    extern unsigned long g_pub_msgs_received;
    extern unsigned long g_pub_msgs_sent;
+
+#    ifdef modify
+   extern uint64_t g_protect_pub_freq;
+#    endif
 #  endif
 #else
 #  include <read_handle.h>
@@ -957,6 +961,10 @@ int _mosquitto_packet_read(struct mosquitto *mosq)
 	g_msgs_received++;
 	if(((mosq->in_packet.command)&0xF5) == PUBLISH){
 		g_pub_msgs_received++;
+		
+#     ifdef modify
+		g_protect_pub_freq++;
+#     endif
 	}
 #  endif
 	rc = mqtt3_packet_handle(db, mosq);
