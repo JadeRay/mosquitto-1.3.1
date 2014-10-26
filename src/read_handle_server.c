@@ -42,6 +42,12 @@ POSSIBILITY OF SUCH DAMAGE.
 
 #ifdef WITH_SYS_TREE
 extern unsigned int g_connection_count;
+
+#  ifdef modify
+extern uint64_t g_protect_conn_freq;
+extern uint64_t g_protect_err_protocol;
+#  endif
+
 #endif
 
 int mqtt3_handle_connect(struct mosquitto_db *db, struct mosquitto *context)
@@ -70,10 +76,17 @@ int mqtt3_handle_connect(struct mosquitto_db *db, struct mosquitto *context)
 
 #ifdef WITH_SYS_TREE
 	g_connection_count++;
+#   ifdef modify
+	g_protect_conn_freq ++;
+#   endif
 #endif
 
 	/* Don't accept multiple CONNECT commands. */
 	if(context->state != mosq_cs_new){
+#ifdef modify
+		_mosquitto_log_printf(NULL, MOSQ_LOG_INFO, "Multiple CONNECT commands.");
+		g_protect_err_protocol ++;
+#endif
 		mqtt3_context_disconnect(db, context);
 		return MOSQ_ERR_PROTOCOL;
 	}
@@ -99,6 +112,9 @@ int mqtt3_handle_connect(struct mosquitto_db *db, struct mosquitto *context)
 			_mosquitto_send_connack(context, CONNACK_REFUSED_PROTOCOL_VERSION);
 			mqtt3_context_disconnect(db, context);
 			_mosquitto_free(protocol_name);
+#ifdef modify
+			g_protect_err_protocol ++;
+#endif
 			return MOSQ_ERR_PROTOCOL;
 		}
 		context->protocol = mosq_p_mqtt31;
@@ -111,12 +127,18 @@ int mqtt3_handle_connect(struct mosquitto_db *db, struct mosquitto *context)
 			_mosquitto_send_connack(context, CONNACK_REFUSED_PROTOCOL_VERSION);
 			mqtt3_context_disconnect(db, context);
 			_mosquitto_free(protocol_name);
+#ifdef modify
+			g_protect_err_protocol ++;
+#endif
 			return MOSQ_ERR_PROTOCOL;
 		}
 		if((context->in_packet.command&0x0F) != 0x00){
 			/* Reserved flags not set to 0, must disconnect. */ 
 			mqtt3_context_disconnect(db, context);
 			_mosquitto_free(protocol_name);
+#ifdef modify
+			g_protect_err_protocol ++;
+#endif
 			return MOSQ_ERR_PROTOCOL;
 		}
 		context->protocol = mosq_p_mqtt311;
@@ -127,6 +149,9 @@ int mqtt3_handle_connect(struct mosquitto_db *db, struct mosquitto *context)
 		}
 		_mosquitto_free(protocol_name);
 		mqtt3_context_disconnect(db, context);
+#ifdef modify
+		g_protect_err_protocol ++;
+#endif
 		return MOSQ_ERR_PROTOCOL;
 	}
 	_mosquitto_free(protocol_name);
@@ -142,6 +167,9 @@ int mqtt3_handle_connect(struct mosquitto_db *db, struct mosquitto *context)
 		_mosquitto_log_printf(NULL, MOSQ_LOG_INFO, "Invalid Will QoS in CONNECT from %s.",
 				context->address);
 		mqtt3_context_disconnect(db, context);
+#ifdef modify
+		g_protect_err_protocol ++;
+#endif
 		return MOSQ_ERR_PROTOCOL;
 	}
 	will_retain = connect_flags & 0x20;
@@ -168,6 +196,9 @@ int mqtt3_handle_connect(struct mosquitto_db *db, struct mosquitto *context)
 			_mosquitto_free(client_id);
 			_mosquitto_send_connack(context, CONNACK_REFUSED_IDENTIFIER_REJECTED);
 			mqtt3_context_disconnect(db, context);
+#ifdef modify
+		g_protect_err_protocol ++;
+#endif
 			return MOSQ_ERR_PROTOCOL;
 		}else{ /* mqtt311 */
 			_mosquitto_free(client_id);
@@ -175,6 +206,9 @@ int mqtt3_handle_connect(struct mosquitto_db *db, struct mosquitto *context)
 			if(clean_session == 0){
 				_mosquitto_send_connack(context, CONNACK_REFUSED_IDENTIFIER_REJECTED);
 				mqtt3_context_disconnect(db, context);
+#ifdef modify
+				g_protect_err_protocol ++;
+#endif
 				return MOSQ_ERR_PROTOCOL;
 			}
 			if(db->config->allow_zero_length_clientid == true){
@@ -191,6 +225,9 @@ int mqtt3_handle_connect(struct mosquitto_db *db, struct mosquitto *context)
 			}else{
 				_mosquitto_send_connack(context, CONNACK_REFUSED_IDENTIFIER_REJECTED);
 				mqtt3_context_disconnect(db, context);
+#ifdef modify
+				g_protect_err_protocol ++;
+#endif
 				return MOSQ_ERR_PROTOCOL;
 			}
 		}

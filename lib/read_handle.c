@@ -42,6 +42,39 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "time_mosq.h"
 #include "util_mosq.h"
 
+
+#ifdef WITH_BROKER
+#  ifdef WITH_SYS_TREE
+#     ifdef modify
+		extern uint64_t g_protect_err_protocol;
+		extern uint64_t g_protect_err_topic;
+		extern uint64_t g_protect_pub_freq;
+		extern uint64_t g_protect_pub_freq_0;
+		extern uint64_t g_protect_pub_freq_1;
+		extern uint64_t g_protect_pub_freq_2; 
+#     endif
+#  endif
+#endif
+
+#ifdef modify
+
+bool topic_check(char* topic, char* topic_pattern, int len)
+{
+	if(topic == NULL) return false;
+	if(!strncmp(topic, topic_pattern, len)) return true;
+	return false;
+}
+
+bool protocol_check(void* payload, char* payload_pattern, int len)
+{
+	if(payload == NULL) return false;
+	char* p = (char*)payload;
+	if(!strncmp(p, payload_pattern, len)) return true;
+	return false;
+}
+
+#endif
+
 int _mosquitto_packet_handle(struct mosquitto *mosq)
 {
 	assert(mosq);
@@ -99,6 +132,10 @@ int _mosquitto_handle_publish(struct mosquitto *mosq)
 	}
 	if(!strlen(message->msg.topic)){
 		_mosquitto_message_cleanup(&message);
+#ifdef modify
+		g_protect_err_protocol++;
+#endif
+
 		return MOSQ_ERR_PROTOCOL;
 	}
 
@@ -116,10 +153,16 @@ int _mosquitto_handle_publish(struct mosquitto *mosq)
 		message->msg.payload = _mosquitto_calloc(message->msg.payloadlen+1, sizeof(uint8_t));
 		if(!message->msg.payload){
 			_mosquitto_message_cleanup(&message);
+#ifdef modify
+			g_protect_err_protocol ++;
+#endif
 			return MOSQ_ERR_NOMEM;
 		}
 		rc = _mosquitto_read_bytes(&mosq->in_packet, message->msg.payload, message->msg.payloadlen);
 		if(rc){
+#ifdef modify
+			g_protect_err_protocol ++;
+#endif
 			_mosquitto_message_cleanup(&message);
 			return rc;
 		}
@@ -130,9 +173,28 @@ int _mosquitto_handle_publish(struct mosquitto *mosq)
 			message->msg.mid, message->msg.topic,
 			(long)message->msg.payloadlen);
 
+#ifdef modify
+	char* topic_pattern = "/u/";
+	char* topic_pattern_len = 3;
+	char* payload_pattern = "AA07";
+	char* payload_pattern_len = 4;
+	if(!topic_check(message->msg.topic, topic_pattern, topic_pattern_len))
+	{
+		g_protect_err_topic ++;
+	}
+	if(!protocol_check(message->msg.payload, payload_pattern, payload_pattern_len))
+	{
+		g_protect_err_protocol ++;
+	}
+	g_protect_pub_freq++;
+#endif
+
 	message->timestamp = mosquitto_time();
 	switch(message->msg.qos){
 		case 0:
+#ifdef modify
+			g_protect_pub_freq_0 ++;
+#endif
 			pthread_mutex_lock(&mosq->callback_mutex);
 			if(mosq->on_message){
 				mosq->in_callback = true;
@@ -143,6 +205,9 @@ int _mosquitto_handle_publish(struct mosquitto *mosq)
 			_mosquitto_message_cleanup(&message);
 			return MOSQ_ERR_SUCCESS;
 		case 1:
+#ifdef modify
+			g_protect_pub_freq_1 ++;
+#endif
 			rc = _mosquitto_send_puback(mosq, message->msg.mid);
 			pthread_mutex_lock(&mosq->callback_mutex);
 			if(mosq->on_message){
@@ -154,6 +219,9 @@ int _mosquitto_handle_publish(struct mosquitto *mosq)
 			_mosquitto_message_cleanup(&message);
 			return rc;
 		case 2:
+#ifdef modify
+			g_protect_pub_freq_2 ++;
+#endif
 			rc = _mosquitto_send_pubrec(mosq, message->msg.mid);
 			pthread_mutex_lock(&mosq->in_message_mutex);
 			message->state = mosq_ms_wait_for_pubrel;
@@ -162,6 +230,9 @@ int _mosquitto_handle_publish(struct mosquitto *mosq)
 			return rc;
 		default:
 			_mosquitto_message_cleanup(&message);
+#ifdef modify
+			g_protect_err_protocol++;
+#endif
 			return MOSQ_ERR_PROTOCOL;
 	}
 }
