@@ -284,13 +284,39 @@ void mqtt3_db_sys_update(struct mosquitto_db *db, int interval, time_t start_tim
 			calc_load(db, buf, "$SYS/broker/load/sockets/1min", exponent, socket_interval, &socket_load1);
 			calc_load(db, buf, "$SYS/broker/load/connections/1min", exponent, connection_interval, &connection_load1);
 #ifdef modify
-			calc_load(db, buf, "$SYS/broker/load/protect/err_protocol/1min", exponent, protect_err_protocol_interval, &protect_err_protocol_load1);
-			calc_load(db, buf, "$SYS/broker/load/protect/err_topic/1min", exponent, protect_err_topic_interval, &protect_err_topic_load1);
-			calc_load(db, buf, "$SYS/broker/load/protect/conn_freq/1min", exponent, protect_conn_freq_interval, &protect_conn_freq_load1);
-			calc_load(db, buf, "$SYS/broker/load/protect/pub_freq/1min", exponent, protect_pub_freq_interval, &protect_pub_freq_load1);
-			calc_load(db, buf, "$SYS/broker/load/protect/pub_freq_0/1min", exponent, protect_pub_freq_0_interval, &protect_pub_freq_0_load1);
-			calc_load(db, buf, "$SYS/broker/load/protect/pub_freq_1/1min", exponent, protect_pub_freq_1_interval, &protect_pub_freq_1_load1);
-			calc_load(db, buf, "$SYS/broker/load/protect/pub_freq_2/1min", exponent, protect_pub_freq_2_interval, &protect_pub_freq_2_load1);
+			//calc_load(db, buf, "$SYS/broker/load/protect/err_protocol/1min", exponent, protect_err_protocol_interval, &protect_err_protocol_load1);
+			//calc_load(db, buf, "$SYS/broker/load/protect/err_topic/1min", exponent, protect_err_topic_interval, &protect_err_topic_load1);
+			//calc_load(db, buf, "$SYS/broker/load/protect/conn_freq/1min", exponent, protect_conn_freq_interval, &protect_conn_freq_load1);
+			//calc_load(db, buf, "$SYS/broker/load/protect/pub_freq/1min", exponent, protect_pub_freq_interval, &protect_pub_freq_load1);
+			//calc_load(db, buf, "$SYS/broker/load/protect/pub_freq_0/1min", exponent, protect_pub_freq_0_interval, &protect_pub_freq_0_load1);
+			//calc_load(db, buf, "$SYS/broker/load/protect/pub_freq_1/1min", exponent, protect_pub_freq_1_interval, &protect_pub_freq_1_load1);
+			//calc_load(db, buf, "$SYS/broker/load/protect/pub_freq_2/1min", exponent, protect_pub_freq_2_interval, &protect_pub_freq_2_load1);
+
+			snprintf(buf, BUFLEN, "%f", protect_err_protocol_interval/60);
+			mqtt3_db_messages_easy_queue(db, NULL, "$SYS/broker/load/protect/err_protocol/1s", 2, strlen(buf), buf, 1);
+	
+		        snprintf(buf, BUFLEN, "%f", protect_err_topic_interval/60);
+			mqtt3_db_messages_easy_queue(db, NULL, "$SYS/broker/load/protect/err_topic/1s", 2, strlen(buf), buf, 1);
+
+			//snprintf(buf, BUFLEN, "%f", protect_err_topic_interval);
+			//mqtt3_db_messages_easy_queue(db, NULL, "$SYS/broker/load/protect/err_topic/cnt", 2, strlen(buf), buf, 1);
+			
+			snprintf(buf, BUFLEN, "%f", protect_conn_freq_interval/60);
+			mqtt3_db_messages_easy_queue(db, NULL, "$SYS/broker/load/protect/conn_freq/1s", 2, strlen(buf), buf, 1);
+			
+			snprintf(buf, BUFLEN, "%f", protect_pub_freq_interval/60);
+			mqtt3_db_messages_easy_queue(db, NULL, "$SYS/broker/load/protect/pub_freq/1s", 2, strlen(buf), buf, 1);
+			
+			snprintf(buf, BUFLEN, "%f", protect_pub_freq_0_interval/60);
+			mqtt3_db_messages_easy_queue(db, NULL, "$SYS/broker/load/protect/pub_freq_0/1s", 2, strlen(buf), buf, 1);
+			
+			snprintf(buf, BUFLEN, "%f", protect_pub_freq_1_interval/60);
+			mqtt3_db_messages_easy_queue(db, NULL, "$SYS/broker/load/protect/pub_freq_1/1s", 2, strlen(buf), buf, 1);
+			
+			snprintf(buf, BUFLEN, "%f", protect_pub_freq_2_interval/60);
+			mqtt3_db_messages_easy_queue(db, NULL, "$SYS/broker/load/protect/pub_freq_2/1s", 2, strlen(buf), buf, 1);
+
+
 #endif
 
 			/* 5 minute load */
