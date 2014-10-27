@@ -22,5 +22,5 @@ topic = "/u/happy" #the right topic is /u/#
 payload = "this is a test" #the right payload must begin with "AA07"
 qos = 0
 while True:
-    client.publish(topic, payload, qos, False)
+	client.publish(topic, payload, qos, False)
 	time.sleep(t)
