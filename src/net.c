@@ -293,8 +293,8 @@ int mqtt3_socket_listen(struct _mqtt3_listener *listener)
 
 	snprintf(service, 10, "%d", listener->port);
 	memset(&hints, 0, sizeof(struct addrinfo));
-	hints.ai_family = PF_UNSPEC;
-	hints.ai_flags = AI_PASSIVE;
+	hints.ai_family = PF_UNSPEC;//protocol neutral
+	hints.ai_flags = AI_PASSIVE;//for bind
 	hints.ai_socktype = SOCK_STREAM;
 
 	if(getaddrinfo(listener->host, service, &hints, &ainfo)) return INVALID_SOCKET;
@@ -317,6 +317,7 @@ int mqtt3_socket_listen(struct _mqtt3_listener *listener)
 			_mosquitto_log_printf(NULL, MOSQ_LOG_WARNING, "Warning: %s", buf);
 			continue;
 		}
+		_mosquitto_log_printf(NULL,MOSQ_LOG_DEBUG,"Opeing socket ");
 		listener->sock_count++;
 		listener->socks = _mosquitto_realloc(listener->socks, sizeof(int)*listener->sock_count);
 		if(!listener->socks){
@@ -342,6 +343,7 @@ int mqtt3_socket_listen(struct _mqtt3_listener *listener)
 			COMPAT_CLOSE(sock);
 			return 1;
 		}
+		_mosquitto_log_printf(NULL,MOSQ_LOG_DEBUG,"Binding socket with port");
 
 		if(listen(sock, 100) == -1){
 			strerror_r(errno, buf, 256);
