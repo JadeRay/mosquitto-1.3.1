@@ -292,29 +292,39 @@ void mqtt3_db_sys_update(struct mosquitto_db *db, int interval, time_t start_tim
 			//calc_load(db, buf, "$SYS/broker/load/protect/pub_freq_1/1min", exponent, protect_pub_freq_1_interval, &protect_pub_freq_1_load1);
 			//calc_load(db, buf, "$SYS/broker/load/protect/pub_freq_2/1min", exponent, protect_pub_freq_2_interval, &protect_pub_freq_2_load1);
 
-			snprintf(buf, BUFLEN, "%f", protect_err_protocol_interval/60);
+			double par_err_protocol = protect_err_protocol_interval/60;
+			snprintf(buf, BUFLEN, "%f", par_err_protocol);
 			mqtt3_db_messages_easy_queue(db, NULL, "$SYS/broker/load/protect/err_protocol/1s", 2, strlen(buf), buf, 1);
 	
-		        snprintf(buf, BUFLEN, "%f", protect_err_topic_interval/60);
+			double par_err_topic = protect_err_topic_interval/60;
+		        snprintf(buf, BUFLEN, "%f", par_err_topic);
 			mqtt3_db_messages_easy_queue(db, NULL, "$SYS/broker/load/protect/err_topic/1s", 2, strlen(buf), buf, 1);
 
 			//snprintf(buf, BUFLEN, "%f", protect_err_topic_interval);
 			//mqtt3_db_messages_easy_queue(db, NULL, "$SYS/broker/load/protect/err_topic/cnt", 2, strlen(buf), buf, 1);
 			
-			snprintf(buf, BUFLEN, "%f", protect_conn_freq_interval/60);
+			double par_con_freq = protect_conn_freq_interval/60;
+			snprintf(buf, BUFLEN, "%f", par_con_freq);
 			mqtt3_db_messages_easy_queue(db, NULL, "$SYS/broker/load/protect/conn_freq/1s", 2, strlen(buf), buf, 1);
 			
-			snprintf(buf, BUFLEN, "%f", protect_pub_freq_interval/60);
+			double par_pub_freq = protect_pub_freq_interval/60;
+			snprintf(buf, BUFLEN, "%f", par_pub_freq);
 			mqtt3_db_messages_easy_queue(db, NULL, "$SYS/broker/load/protect/pub_freq/1s", 2, strlen(buf), buf, 1);
 			
-			snprintf(buf, BUFLEN, "%f", protect_pub_freq_0_interval/60);
+			double par_pub_freq_0 = protect_pub_freq_0_interval/60;
+			snprintf(buf, BUFLEN, "%f", par_pub_freq_0);
 			mqtt3_db_messages_easy_queue(db, NULL, "$SYS/broker/load/protect/pub_freq_0/1s", 2, strlen(buf), buf, 1);
 			
-			snprintf(buf, BUFLEN, "%f", protect_pub_freq_1_interval/60);
+			double par_pub_freq_1 = protect_pub_freq_1_interval/60;
+			snprintf(buf, BUFLEN, "%f", par_pub_freq_1);
 			mqtt3_db_messages_easy_queue(db, NULL, "$SYS/broker/load/protect/pub_freq_1/1s", 2, strlen(buf), buf, 1);
 			
-			snprintf(buf, BUFLEN, "%f", protect_pub_freq_2_interval/60);
+			double par_pub_freq_2 = protect_pub_freq_2_interval/60;
+			snprintf(buf, BUFLEN, "%f", par_pub_freq_2);
 			mqtt3_db_messages_easy_queue(db, NULL, "$SYS/broker/load/protect/pub_freq_2/1s", 2, strlen(buf), buf, 1);
+
+			snprintf(buf, BUFLEN, "%f,%f,%f,%f", par_err_protocol, par_err_topic, par_con_freq, par_pub_freq);
+			mqtt3_db_messages_easy_queue(db, NULL, "$SYS/broker/load/protect/actscore", 2, strlen(buf), buf, 1);
 
 
 #endif

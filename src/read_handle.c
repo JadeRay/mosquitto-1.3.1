@@ -258,6 +258,7 @@ int mqtt3_handle_publish(struct mosquitto_db *db, struct mosquitto *context)
 	if(strncmp(topic, topic_pattern, topic_pattern_len)) g_protect_err_topic ++;
 	if(strncmp(payload, payload_pattern, payload_pattern_len)) g_protect_err_protocol ++;
 
+	g_protect_pub_freq ++;
 	_mosquitto_log_printf(NULL, MOSQ_LOG_DEBUG, "Received PUBLISH from %s (d%d, q%d, r%d, m%d, '%s', ... (%ld bytes))", context->id, dup, qos, retain, mid, topic, (long)payloadlen);
 	if(qos > 0){
 		mqtt3_db_message_store_find(context, mid, &stored);
