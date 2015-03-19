@@ -9,7 +9,7 @@ fobj = open("r_pub.csv", "w+")
 
 def on_connect(client, userdata, flags, rc):
 	print ("Connected with result code "+ str(rc))
-	client.subscribe("$SYS/broker/load/protect/actscore")
+	client.subscribe("/protect/#/#")
 	#client.subscribe("$SYS/broker/load/protect/#")
 	
 

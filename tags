@@ -372,20 +372,6 @@ Mosquitto	lib/jsws/mosquitto.js	/^function Mosquitto()$/;"	c
 Mosquitto	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^class Mosquitto:$/;"	c
 Mosquitto	lib/python/build/lib/mosquitto.py	/^class Mosquitto:$/;"	c
 Mosquitto	lib/python/mosquitto.py	/^class Mosquitto:$/;"	c
-Mosquitto.connect	lib/jsws/mosquitto.js	/^	connect : function(url, keepalive){$/;"	m
-Mosquitto.connect.ws	lib/jsws/mosquitto.js	/^		this.ws.onerror = function(evt){$/;"	m
-Mosquitto.disconnect	lib/jsws/mosquitto.js	/^	disconnect : function(){$/;"	m
-Mosquitto.generate_mid	lib/jsws/mosquitto.js	/^	generate_mid : function()$/;"	m
-Mosquitto.get_remaining_count	lib/jsws/mosquitto.js	/^	get_remaining_count : function(remaining_length)$/;"	m
-Mosquitto.mqtt_ping	lib/jsws/mosquitto.js	/^	mqtt_ping : function()$/;"	m
-Mosquitto.publish	lib/jsws/mosquitto.js	/^	publish : function(topic, payload, qos, retain){$/;"	m
-Mosquitto.queue	lib/jsws/mosquitto.js	/^	queue : function(buffer)$/;"	m
-Mosquitto.send_cmd_with_mid	lib/jsws/mosquitto.js	/^	send_cmd_with_mid : function(cmd, mid)$/;"	m
-Mosquitto.subscribe	lib/jsws/mosquitto.js	/^	subscribe : function(topic, qos)$/;"	m
-Mosquitto.unsubscribe	lib/jsws/mosquitto.js	/^	unsubscribe : function(topic)$/;"	m
-Mosquitto.ws_onclose	lib/jsws/mosquitto.js	/^	ws_onclose : function(evt) {$/;"	m
-Mosquitto.ws_onmessage	lib/jsws/mosquitto.js	/^	ws_onmessage : function(evt) {$/;"	m
-Mosquitto.ws_onopen	lib/jsws/mosquitto.js	/^	ws_onopen : function(evt) {$/;"	m
 MosquittoInPacket	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^class MosquittoInPacket:$/;"	c
 MosquittoInPacket	lib/python/build/lib/mosquitto.py	/^class MosquittoInPacket:$/;"	c
 MosquittoInPacket	lib/python/mosquitto.py	/^class MosquittoInPacket:$/;"	c
@@ -818,6 +804,7 @@ auto_id_prefix	src/mosquitto_broker.h	/^	char *auto_id_prefix;$/;"	m	struct:mqtt
 auto_id_prefix_len	src/mosquitto_broker.h	/^	int auto_id_prefix_len;$/;"	m	struct:mqtt3_config
 autosave_interval	src/mosquitto_broker.h	/^	int autosave_interval;$/;"	m	struct:mqtt3_config
 autosave_on_changes	src/mosquitto_broker.h	/^	bool autosave_on_changes;$/;"	m	struct:mqtt3_config
+average	protect/recv.py	/^average = [0, 0, 0, 2]$/;"	v
 base64_encode	src/mosquitto_passwd.c	/^int base64_encode(unsigned char *in, unsigned int in_len, char **encoded)$/;"	f
 bd_both	src/mosquitto_broker.h	/^	bd_both = 2$/;"	e	enum:mqtt3_bridge_direction
 bd_in	src/mosquitto_broker.h	/^	bd_in = 1,$/;"	e	enum:mqtt3_bridge_direction
@@ -919,7 +906,7 @@ client	protect/pub2_retain.py	/^client = mqtt.Client("python_client_test", True)
 client	protect/pub_freq_test.py	/^client = mqtt.Client("python_client_test", True)$/;"	v
 client	protect/python_client.py	/^client = mqtt.Client("python_client_test", True)$/;"	v
 client	protect/python_mqtt.py	/^client = mqtt.Client("python_client", True)$/;"	v
-client	protect/recv.py	/^client = mqtt.Client("python_client", True)$/;"	v
+client	protect/recv.py	/^client = mqtt.Client("recv_client", True)$/;"	v
 client	protect/send.py	/^client = mqtt.Client("python_client_test", True)$/;"	v
 client	test/lib/01-con-discon-success.py	/^client = subprocess.Popen(client_args, env=env)$/;"	v
 client	test/lib/01-keepalive-pingreq.py	/^client = subprocess.Popen(client_args, env=env)$/;"	v
@@ -1179,6 +1166,7 @@ connack_string	lib/python/build/lib/mosquitto.py	/^def connack_string(connack_co
 connack_string	lib/python/mosquitto.py	/^def connack_string(connack_code):$/;"	f
 connect	lib/cpp/mosquittopp.cpp	/^int mosquittopp::connect(const char *host, int port, int keepalive)$/;"	f	class:mosqpp::mosquittopp
 connect	lib/cpp/mosquittopp.cpp	/^int mosquittopp::connect(const char *host, int port, int keepalive, const char *bind_address)$/;"	f	class:mosqpp::mosquittopp
+connect	lib/jsws/mosquitto.js	/^	connect : function(url, keepalive){$/;"	m	class:Mosquitto
 connect	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def connect(self, host, port=1883, keepalive=60, bind_address=""):$/;"	m	class:Mosquitto
 connect	lib/python/build/lib/mosquitto.py	/^    def connect(self, host, port=1883, keepalive=60, bind_address=""):$/;"	m	class:Mosquitto
 connect	lib/python/mosquitto.py	/^    def connect(self, host, port=1883, keepalive=60, bind_address=""):$/;"	m	class:Mosquitto
@@ -1318,6 +1306,7 @@ db_version	src/persist.c	/^static uint32_t db_version;$/;"	v	file:
 dbid_t	src/mosquitto_broker.h	/^typedef uint64_t dbid_t;$/;"	t
 default_listener	src/mosquitto_broker.h	/^	struct _mqtt3_listener default_listener;$/;"	m	struct:mqtt3_config	typeref:struct:mqtt3_config::_mqtt3_listener
 delete_pwuser	src/mosquitto_passwd.c	/^int delete_pwuser(FILE *fptr, FILE *ftmp, const char *username)$/;"	f
+delta	protect/recv.py	/^delta = [0.2, 0.2, 0.2, 5]$/;"	v
 deny_severity	src/mosquitto.c	/^int deny_severity = LOG_INFO;$/;"	v
 description	lib/python/setup.py	/^	description='MQTT version 3.1 client class',$/;"	v
 dest_id_count	src/mosquitto_broker.h	/^	int dest_id_count;$/;"	m	struct:mosquitto_msg_store
@@ -1325,6 +1314,7 @@ dest_ids	src/mosquitto_broker.h	/^	char **dest_ids;$/;"	m	struct:mosquitto_msg_s
 direction	src/mosquitto_broker.h	/^	enum mosquitto_msg_direction direction;$/;"	m	struct:mosquitto_client_msg	typeref:enum:mosquitto_client_msg::mosquitto_msg_direction
 direction	src/mosquitto_broker.h	/^	enum mqtt3_bridge_direction direction;$/;"	m	struct:_mqtt3_bridge_topic	typeref:enum:_mqtt3_bridge_topic::mqtt3_bridge_direction
 disconnect	lib/cpp/mosquittopp.cpp	/^int mosquittopp::disconnect()$/;"	f	class:mosqpp::mosquittopp
+disconnect	lib/jsws/mosquitto.js	/^	disconnect : function(){$/;"	m	class:Mosquitto
 disconnect	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def disconnect(self):$/;"	m	class:Mosquitto
 disconnect	lib/python/build/lib/mosquitto.py	/^    def disconnect(self):$/;"	m	class:Mosquitto
 disconnect	lib/python/mosquitto.py	/^    def disconnect(self):$/;"	m	class:Mosquitto
@@ -1405,6 +1395,7 @@ first_connection	test/lib/python/03-publish-c2b-qos2-disconnect.test	/^first_con
 flag_db_backup	src/mosquitto.c	/^bool flag_db_backup = false;$/;"	v
 flag_reload	src/mosquitto.c	/^bool flag_reload = false;$/;"	v
 flag_tree_print	src/mosquitto.c	/^bool flag_tree_print = false;$/;"	v
+fobj	protect/recv.py	/^fobj = open("r_pub.csv", "w+")$/;"	v
 fptr	test/msgsps_sub.c	/^FILE *fptr = NULL;$/;"	v
 g_bytes_received	src/sys_tree.c	/^uint64_t g_bytes_received = 0;$/;"	v
 g_bytes_sent	src/sys_tree.c	/^uint64_t g_bytes_sent = 0;$/;"	v
@@ -1439,10 +1430,12 @@ gen_suback	test/mosq_test.py	/^def gen_suback(mid, qos):$/;"	f
 gen_subscribe	test/mosq_test.py	/^def gen_subscribe(mid, topic, qos):$/;"	f
 gen_unsuback	test/mosq_test.py	/^def gen_unsuback(mid):$/;"	f
 gen_unsubscribe	test/mosq_test.py	/^def gen_unsubscribe(mid, topic):$/;"	f
+generate_mid	lib/jsws/mosquitto.js	/^	generate_mid : function()$/;"	m	class:Mosquitto
 get16bits	src/uthash.h	458;"	d
 get16bits	src/uthash.h	461;"	d
 get16bits	src/uthash.h	465;"	d
 get_password	src/mosquitto_passwd.c	/^int get_password(char *password, int len)$/;"	f
+get_remaining_count	lib/jsws/mosquitto.js	/^	get_remaining_count : function(remaining_length)$/;"	m	class:Mosquitto
 gets_quiet	src/mosquitto_passwd.c	/^int gets_quiet(char *s, int len)$/;"	f
 handle_read	test/random_client.c	/^int handle_read(mqtt3_context *context)$/;"	f
 handle_sighup	src/mosquitto.c	/^void handle_sighup(int signal)$/;"	f
@@ -2127,6 +2120,7 @@ mqtt3_sub_remove	src/subs.c	/^int mqtt3_sub_remove(struct mosquitto_db *db, stru
 mqtt3_sub_tree_print	src/subs.c	/^void mqtt3_sub_tree_print(struct _mosquitto_subhier *root, int level)$/;"	f
 mqtt3_subs_clean_session	src/subs.c	/^int mqtt3_subs_clean_session(struct mosquitto_db *db, struct mosquitto *context, struct _mosquitto_subhier *root)$/;"	f
 mqtt_host	examples/mysql_log/mysql_log.c	23;"	d	file:
+mqtt_ping	lib/jsws/mosquitto.js	/^	mqtt_ping : function()$/;"	m	class:Mosquitto
 mqtt_port	examples/mysql_log/mysql_log.c	24;"	d	file:
 mqtt_tempconv	examples/temperature_conversion/temperature_conversion.cpp	/^mqtt_tempconv::mqtt_tempconv(const char *id, const char *host, int port) : mosquittopp(id)$/;"	f	class:mqtt_tempconv
 mqtt_tempconv	examples/temperature_conversion/temperature_conversion.h	/^class mqtt_tempconv : public mosqpp::mosquittopp$/;"	c
@@ -2541,6 +2535,7 @@ pubcomp_packet	test/lib/03-publish-c2b-qos2-timeout.py	/^pubcomp_packet = mosq_t
 pubcomp_packet	test/lib/03-publish-c2b-qos2.py	/^pubcomp_packet = mosq_test.gen_pubcomp(mid)$/;"	v
 pubcomp_packet2	test/broker/02-subpub-qos2.py	/^pubcomp_packet2 = mosq_test.gen_pubcomp(mid)$/;"	v
 publish	lib/cpp/mosquittopp.cpp	/^int mosquittopp::publish(int *mid, const char *topic, int payloadlen, const void *payload, int qos, bool retain)$/;"	f	class:mosqpp::mosquittopp
+publish	lib/jsws/mosquitto.js	/^	publish : function(topic, payload, qos, retain){$/;"	m	class:Mosquitto
 publish	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def publish(self, topic, payload=None, qos=0, retain=False):$/;"	m	class:Mosquitto
 publish	lib/python/build/lib/mosquitto.py	/^    def publish(self, topic, payload=None, qos=0, retain=False):$/;"	m	class:Mosquitto
 publish	lib/python/mosquitto.py	/^    def publish(self, topic, payload=None, qos=0, retain=False):$/;"	m	class:Mosquitto
@@ -2670,6 +2665,7 @@ qos	src/mosquitto_broker.h	/^	int qos;$/;"	m	struct:_mosquitto_subleaf
 qos	src/mosquitto_broker.h	/^	int qos;$/;"	m	struct:_mqtt3_bridge_topic
 qos	src/mosquitto_broker.h	/^	int qos;$/;"	m	struct:mosquitto_client_msg
 qos	test/qos.c	/^	int qos;$/;"	m	struct:sub	file:
+queue	lib/jsws/mosquitto.js	/^	queue : function(buffer)$/;"	m	class:Mosquitto
 queue_qos0_messages	src/mosquitto_broker.h	/^	bool queue_qos0_messages;$/;"	m	struct:mqtt3_config
 quiet	client/pub_client.c	/^static bool quiet = false;$/;"	v	file:
 quiet	client/sub_client.c	/^	bool quiet;$/;"	m	struct:userdata	file:
@@ -2988,6 +2984,7 @@ salt	src/mosquitto_broker.h	/^	unsigned char *salt;$/;"	m	struct:_mosquitto_unpw
 salt_len	src/mosquitto_broker.h	/^	unsigned int salt_len;$/;"	m	struct:_mosquitto_unpwd
 security_cleanup	src/mosquitto_broker.h	/^	int (*security_cleanup)(void *user_data, struct mosquitto_auth_opt *auth_opts, int auth_opt_count, bool reload);$/;"	m	struct:_mosquitto_auth_plugin
 security_init	src/mosquitto_broker.h	/^	int (*security_init)(void *user_data, struct mosquitto_auth_opt *auth_opts, int auth_opt_count, bool reload);$/;"	m	struct:_mosquitto_auth_plugin
+send_cmd_with_mid	lib/jsws/mosquitto.js	/^	send_cmd_with_mid : function(cmd, mid)$/;"	m	class:Mosquitto
 send_random	test/random_client.c	/^void send_random(mqtt3_context *context, int length)$/;"	f
 sent	test/qos.c	/^	bool sent;$/;"	m	struct:msg_list	file:
 sent_count	test/qos.c	/^int sent_count = 0;$/;"	v
@@ -3219,6 +3216,7 @@ subs	src/mosquitto_broker.h	/^	struct _mosquitto_subhier subs;$/;"	m	struct:mosq
 subs	src/mosquitto_broker.h	/^	struct _mosquitto_subleaf *subs;$/;"	m	struct:_mosquitto_subhier	typeref:struct:_mosquitto_subhier::_mosquitto_subleaf
 subs	test/qos.c	/^struct sub subs[3];$/;"	v	typeref:struct:sub
 subscribe	lib/cpp/mosquittopp.cpp	/^int mosquittopp::subscribe(int *mid, const char *sub, int qos)$/;"	f	class:mosqpp::mosquittopp
+subscribe	lib/jsws/mosquitto.js	/^	subscribe : function(topic, qos)$/;"	m	class:Mosquitto
 subscribe	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def subscribe(self, topic, qos=0):$/;"	m	class:Mosquitto
 subscribe	lib/python/build/lib/mosquitto.py	/^    def subscribe(self, topic, qos=0):$/;"	m	class:Mosquitto
 subscribe	lib/python/mosquitto.py	/^    def subscribe(self, topic, qos=0):$/;"	m	class:Mosquitto
@@ -3362,6 +3360,7 @@ unsuback_packet	test/broker/04-retain-qos0-clear.py	/^unsuback_packet = mosq_tes
 unsuback_packet	test/broker/04-retain-qos0-repeated.py	/^unsuback_packet = mosq_test.gen_unsuback(unsub_mid)$/;"	v
 unsuback_packet	test/lib/02-unsubscribe.py	/^unsuback_packet = mosq_test.gen_unsuback(mid)$/;"	v
 unsubscribe	lib/cpp/mosquittopp.cpp	/^int mosquittopp::unsubscribe(int *mid, const char *sub)$/;"	f	class:mosqpp::mosquittopp
+unsubscribe	lib/jsws/mosquitto.js	/^	unsubscribe : function(topic)$/;"	m	class:Mosquitto
 unsubscribe	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def unsubscribe(self, topic):$/;"	m	class:Mosquitto
 unsubscribe	lib/python/build/lib/mosquitto.py	/^    def unsubscribe(self, topic):$/;"	m	class:Mosquitto
 unsubscribe	lib/python/mosquitto.py	/^    def unsubscribe(self, topic):$/;"	m	class:Mosquitto
@@ -3421,4 +3420,8 @@ will_set	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def will_set(sel
 will_set	lib/python/build/lib/mosquitto.py	/^    def will_set(self, topic, payload=None, qos=0, retain=False):$/;"	m	class:Mosquitto
 will_set	lib/python/mosquitto.py	/^    def will_set(self, topic, payload=None, qos=0, retain=False):$/;"	m	class:Mosquitto
 write_e	src/persist.h	46;"	d
+ws	lib/jsws/mosquitto.js	/^		this.ws.onerror = function(evt){$/;"	m	class:connect
+ws_onclose	lib/jsws/mosquitto.js	/^	ws_onclose : function(evt) {$/;"	m	class:Mosquitto
+ws_onmessage	lib/jsws/mosquitto.js	/^	ws_onmessage : function(evt) {$/;"	m	class:Mosquitto
+ws_onopen	lib/jsws/mosquitto.js	/^	ws_onopen : function(evt) {$/;"	m	class:Mosquitto
 ~mosquittopp	lib/cpp/mosquittopp.cpp	/^mosquittopp::~mosquittopp()$/;"	f	class:mosqpp::mosquittopp

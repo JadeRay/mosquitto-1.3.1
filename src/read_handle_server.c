@@ -85,7 +85,6 @@ int mqtt3_handle_connect(struct mosquitto_db *db, struct mosquitto *context)
 	if(context->state != mosq_cs_new){
 #ifdef modify
 		_mosquitto_log_printf(NULL, MOSQ_LOG_INFO, "Multiple CONNECT commands.");
-		g_protect_err_protocol ++;
 #endif
 		mqtt3_context_disconnect(db, context);
 		return MOSQ_ERR_PROTOCOL;
@@ -338,6 +337,12 @@ int mqtt3_handle_connect(struct mosquitto_db *db, struct mosquitto *context)
 			}
 		}
 	}
+	#ifdef modify
+	
+	char conn_freq_topic[256];
+	sprintf(conn_freq_topic, "/protect/rc/%s", username);
+	mqtt3_db_messages_easy_queue(db, NULL, conn_freq_topic, 2, 3, "111", 1);
+	#endif
 
 #ifdef WITH_TLS
 	if(context->listener->use_identity_as_username){
