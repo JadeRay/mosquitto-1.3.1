@@ -5,22 +5,25 @@ import time
 import sys, getopt
 
 
-client = mqtt.Client("python_client_test", True)
-host = "192.168.139.80"
-
-opts, args = getopt.getopt(sys.argv[1:], "h:")
-
-client.connect (host, 1883, 60)
+opts, args = getopt.getopt(sys.argv[1:], "h:n:")
 
 for op, value in opts:
     if op == "-h":
-        d = int(value)
-    
-t = 10.0/d
+        div = int(value)
+    else if op == "-n":
+	num = int(value)
+    else:
+	pass
 
+t = 1.0/div
+
+client = mqtt.Client("Client"+str(num), True)
+host = "localhost"
+
+client.connect (host, 1883, 60)
 topic = "/test/happy" #the right topic is /u/#
-payload = "AA07 this is a test" #the right payload must begin with "AA07"
-qos = 0
+payload = "A3B3 happy" #the right payload must begin with "A3B3"
+qos = 2
 while True:
     client.publish(topic, payload, qos, False)
-	time.sleep(t)
+    time.sleep(t)

@@ -4,23 +4,27 @@ import paho.mqtt.client as mqtt
 import time
 import sys, getopt
 
-
-client = mqtt.Client("python_client_test", True)
-host = "192.168.139.80"
-
-opts, args = getopt.getopt(sys.argv[1:], "h:")
-
-client.connect (host, 1883, 60)
+opts, args = getopt.getopt(sys.argv[1:], "h:n:")
 
 for op, value in opts:
     if op == "-h":
-        d = int(value)
+        div = int(value)
+    else if op == "-n":
+	num = int(value)
+    else:
+	pass
     
-t = 10.0/d
+t = 1.0/div
 
-topic = "/u/happy" #the right topic is /u/#
+client = mqtt.Client("Client"+str(num), True)
+host = "localhost"
+
+client.username_pw_set("client"+str(num), "123456")
+
+client.connect (host, 1883, 60)
+topic = "/test/normal" #the right topic is /u/#
 payload = "this is a test" #the right payload must begin with "AA07"
-qos = 0
+qos = 2
 while True:
 	client.publish(topic, payload, qos, False)
 	time.sleep(t)

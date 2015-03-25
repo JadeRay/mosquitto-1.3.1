@@ -76,9 +76,6 @@ int mqtt3_handle_connect(struct mosquitto_db *db, struct mosquitto *context)
 
 #ifdef WITH_SYS_TREE
 	g_connection_count++;
-#   ifdef modify
-	g_protect_conn_freq ++;
-#   endif
 #endif
 
 	/* Don't accept multiple CONNECT commands. */
@@ -340,8 +337,9 @@ int mqtt3_handle_connect(struct mosquitto_db *db, struct mosquitto *context)
 	#ifdef modify
 	
 	char conn_freq_topic[256];
-	sprintf(conn_freq_topic, "/protect/rc/%s", username);
-	mqtt3_db_messages_easy_queue(db, NULL, conn_freq_topic, 2, 3, "111", 1);
+	snprintf(conn_freq_topic, 256, "$SYS/protect/rc/%s", username);
+	mqtt3_db_messages_easy_queue(db, NULL, conn_freq_topic, 2, 1, "2", 1);
+	_mosquitto_log_printf(NULL, MOSQ_LOG_DEBUG, "Pub to topic %s payload:2.", conn_freq_topic);
 	#endif
 
 #ifdef WITH_TLS

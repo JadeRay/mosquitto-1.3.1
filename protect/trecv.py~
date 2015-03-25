@@ -16,9 +16,9 @@ evi = [2, 1, 1, 1]
 
 def check_protocol(payload):
     if payload[0:3] == "A3B3":
-		return True;
+	return True;
     else:
-		return False;
+	return False;
 
 def on_connect(client, userdata, flags, rc):
     print ("Connected with result code "+ str(rc))
@@ -37,21 +37,21 @@ def on_message(client, userdata, msg):
 	if username == "" or username == "zhouyao":
 	    pass
 	else:
-		if attr.has_key(username):
-		   pass
+        if attr.has_key(username):
+	   pass
+	else:
+	    attt[username] = [0]*5 #rc,rp,rep,rao,uas
+	for i in rage(4):
+	    if topic_type == attrlist[i]:
+		if i != 3:
+		    freq = int(msg.payload)
+		    attr[username][i] = attr[username][i] + freq
 		else:
-			attt[username] = [0]*5 #rc,rp,rep,rao,uas
-		for i in rage(4):
-			if topic_type == attrlist[i]:
-				if i != 3:
-					freq = int(msg.payload)
-					attr[username][i] = attr[username][i] + freq
-				else:
-					if check_protocol(str(msg.payload)):
-						pass
-					else:
-						attr[username][i] += 1
-			break
+		    if check_protocol(str(msg.payload)):
+			pass
+		    else:
+			attr[username][i] += 1
+		break
 
     
 def main():	
@@ -81,11 +81,10 @@ def main():
 		for i in range(4):
 		    afreq = attr[key][i]/div_interval
 		    if afreq <= 3:
-				attr[key][i] = 1
+			attr[key][i] = 1
 		    else:
-				attr[key][i] = math.atan((afreq - 0)/evi[i] + delta))*beta
-				attr[key][-1] += alpha[i]*attr[key][i]
-
+			attr[key][i] = math.atan((afreq - 0)/evi[i] + delta))*beta
+		    attr[key][-1] += alpha[i]*attr[key][i]
 		attr[key][-1] = miu*attr[key][-1]
 		
 		log.write("name:%s score:%s" % (key, attr[key][-1]))

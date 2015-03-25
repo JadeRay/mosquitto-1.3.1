@@ -48,36 +48,28 @@ COMPAT_EWOULDBLOCK	lib/net_mosq.h	53;"	d
 CONNACK	lib/jsws/mosquitto.js	/^var CONNACK = 0x20;$/;"	v
 CONNACK	lib/mqtt3_protocol.h	43;"	d
 CONNACK	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^CONNACK = 0x20$/;"	v
-CONNACK	lib/python/build/lib/mosquitto.py	/^CONNACK = 0x20$/;"	v
 CONNACK	lib/python/mosquitto.py	/^CONNACK = 0x20$/;"	v
 CONNACK_ACCEPTED	lib/mqtt3_protocol.h	57;"	d
 CONNACK_ACCEPTED	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^CONNACK_ACCEPTED = 0$/;"	v
-CONNACK_ACCEPTED	lib/python/build/lib/mosquitto.py	/^CONNACK_ACCEPTED = 0$/;"	v
 CONNACK_ACCEPTED	lib/python/mosquitto.py	/^CONNACK_ACCEPTED = 0$/;"	v
 CONNACK_REFUSED_BAD_USERNAME_PASSWORD	lib/mqtt3_protocol.h	61;"	d
 CONNACK_REFUSED_BAD_USERNAME_PASSWORD	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^CONNACK_REFUSED_BAD_USERNAME_PASSWORD = 4$/;"	v
-CONNACK_REFUSED_BAD_USERNAME_PASSWORD	lib/python/build/lib/mosquitto.py	/^CONNACK_REFUSED_BAD_USERNAME_PASSWORD = 4$/;"	v
 CONNACK_REFUSED_BAD_USERNAME_PASSWORD	lib/python/mosquitto.py	/^CONNACK_REFUSED_BAD_USERNAME_PASSWORD = 4$/;"	v
 CONNACK_REFUSED_IDENTIFIER_REJECTED	lib/mqtt3_protocol.h	59;"	d
 CONNACK_REFUSED_IDENTIFIER_REJECTED	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^CONNACK_REFUSED_IDENTIFIER_REJECTED = 2$/;"	v
-CONNACK_REFUSED_IDENTIFIER_REJECTED	lib/python/build/lib/mosquitto.py	/^CONNACK_REFUSED_IDENTIFIER_REJECTED = 2$/;"	v
 CONNACK_REFUSED_IDENTIFIER_REJECTED	lib/python/mosquitto.py	/^CONNACK_REFUSED_IDENTIFIER_REJECTED = 2$/;"	v
 CONNACK_REFUSED_NOT_AUTHORIZED	lib/mqtt3_protocol.h	62;"	d
 CONNACK_REFUSED_NOT_AUTHORIZED	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^CONNACK_REFUSED_NOT_AUTHORIZED = 5$/;"	v
-CONNACK_REFUSED_NOT_AUTHORIZED	lib/python/build/lib/mosquitto.py	/^CONNACK_REFUSED_NOT_AUTHORIZED = 5$/;"	v
 CONNACK_REFUSED_NOT_AUTHORIZED	lib/python/mosquitto.py	/^CONNACK_REFUSED_NOT_AUTHORIZED = 5$/;"	v
 CONNACK_REFUSED_PROTOCOL_VERSION	lib/mqtt3_protocol.h	58;"	d
 CONNACK_REFUSED_PROTOCOL_VERSION	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^CONNACK_REFUSED_PROTOCOL_VERSION = 1$/;"	v
-CONNACK_REFUSED_PROTOCOL_VERSION	lib/python/build/lib/mosquitto.py	/^CONNACK_REFUSED_PROTOCOL_VERSION = 1$/;"	v
 CONNACK_REFUSED_PROTOCOL_VERSION	lib/python/mosquitto.py	/^CONNACK_REFUSED_PROTOCOL_VERSION = 1$/;"	v
 CONNACK_REFUSED_SERVER_UNAVAILABLE	lib/mqtt3_protocol.h	60;"	d
 CONNACK_REFUSED_SERVER_UNAVAILABLE	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^CONNACK_REFUSED_SERVER_UNAVAILABLE = 3$/;"	v
-CONNACK_REFUSED_SERVER_UNAVAILABLE	lib/python/build/lib/mosquitto.py	/^CONNACK_REFUSED_SERVER_UNAVAILABLE = 3$/;"	v
 CONNACK_REFUSED_SERVER_UNAVAILABLE	lib/python/mosquitto.py	/^CONNACK_REFUSED_SERVER_UNAVAILABLE = 3$/;"	v
 CONNECT	lib/jsws/mosquitto.js	/^var CONNECT = 0x10;$/;"	v
 CONNECT	lib/mqtt3_protocol.h	42;"	d
 CONNECT	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^CONNECT = 0x10$/;"	v
-CONNECT	lib/python/build/lib/mosquitto.py	/^CONNECT = 0x10$/;"	v
 CONNECT	lib/python/mosquitto.py	/^CONNECT = 0x10$/;"	v
 CurrentCostMQTT	misc/currentcost/gnome-panel/CurrentCostMQTT.py	/^class CurrentCostMQTT(gnomeapplet.Applet):$/;"	c
 CurrentCostMQTT_factory	misc/currentcost/gnome-panel/CurrentCostMQTT.py	/^def CurrentCostMQTT_factory(applet, iid):$/;"	f
@@ -98,14 +90,11 @@ DIRS	Makefile	/^DIRS=lib client src$/;"	m
 DISCONNECT	lib/jsws/mosquitto.js	/^var DISCONNECT = 0xE0;$/;"	v
 DISCONNECT	lib/mqtt3_protocol.h	55;"	d
 DISCONNECT	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^DISCONNECT = 0xE0$/;"	v
-DISCONNECT	lib/python/build/lib/mosquitto.py	/^DISCONNECT = 0xE0$/;"	v
 DISCONNECT	lib/python/mosquitto.py	/^DISCONNECT = 0xE0$/;"	v
 DISTDIRS	Makefile	/^DISTDIRS=man$/;"	m
 DOCDIRS	Makefile	/^DOCDIRS=man$/;"	m
 EAGAIN	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    EAGAIN = errno.EAGAIN$/;"	v
 EAGAIN	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    EAGAIN = errno.WSAEWOULDBLOCK$/;"	v
-EAGAIN	lib/python/build/lib/mosquitto.py	/^    EAGAIN = errno.EAGAIN$/;"	v
-EAGAIN	lib/python/build/lib/mosquitto.py	/^    EAGAIN = errno.WSAEWOULDBLOCK$/;"	v
 EAGAIN	lib/python/mosquitto.py	/^    EAGAIN = errno.EAGAIN$/;"	v
 EAGAIN	lib/python/mosquitto.py	/^    EAGAIN = errno.WSAEWOULDBLOCK$/;"	v
 ELMT_FROM_HH	src/uthash.h	92;"	d
@@ -229,17 +218,13 @@ MAX_BUFFER_LEN	src/mosquitto_passwd.c	54;"	d	file:
 MESSAGE_COUNT	test/msgsps_common.h	1;"	d
 MESSAGE_SIZE	test/msgsps_common.h	2;"	d
 MOSQUITTO_MAJOR	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQUITTO_MAJOR=1$/;"	v
-MOSQUITTO_MAJOR	lib/python/build/lib/mosquitto.py	/^MOSQUITTO_MAJOR=1$/;"	v
 MOSQUITTO_MAJOR	lib/python/mosquitto.py	/^MOSQUITTO_MAJOR=1$/;"	v
 MOSQUITTO_MINOR	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQUITTO_MINOR=2$/;"	v
-MOSQUITTO_MINOR	lib/python/build/lib/mosquitto.py	/^MOSQUITTO_MINOR=2$/;"	v
 MOSQUITTO_MINOR	lib/python/mosquitto.py	/^MOSQUITTO_MINOR=2$/;"	v
 MOSQUITTO_PLUGIN_H	src/mosquitto_plugin.h	31;"	d
 MOSQUITTO_REVISION	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQUITTO_REVISION=90$/;"	v
-MOSQUITTO_REVISION	lib/python/build/lib/mosquitto.py	/^MOSQUITTO_REVISION=90$/;"	v
 MOSQUITTO_REVISION	lib/python/mosquitto.py	/^MOSQUITTO_REVISION=90$/;"	v
 MOSQUITTO_VERSION_NUMBER	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQUITTO_VERSION_NUMBER=(MOSQUITTO_MAJOR*1000000+MOSQUITTO_MINOR*1000+MOSQUITTO_REVISION)$/;"	v
-MOSQUITTO_VERSION_NUMBER	lib/python/build/lib/mosquitto.py	/^MOSQUITTO_VERSION_NUMBER=(MOSQUITTO_MAJOR*1000000+MOSQUITTO_MINOR*1000+MOSQUITTO_REVISION)$/;"	v
 MOSQUITTO_VERSION_NUMBER	lib/python/mosquitto.py	/^MOSQUITTO_VERSION_NUMBER=(MOSQUITTO_MAJOR*1000000+MOSQUITTO_MINOR*1000+MOSQUITTO_REVISION)$/;"	v
 MOSQ_ACL_NONE	src/mosquitto_plugin.h	35;"	d
 MOSQ_ACL_READ	src/mosquitto_plugin.h	36;"	d
@@ -248,92 +233,71 @@ MOSQ_AUTH_PLUGIN_VERSION	src/mosquitto_plugin.h	33;"	d
 MOSQ_DB_VERSION	src/persist.h	33;"	d
 MOSQ_ERR_ACL_DENIED	lib/mosquitto.h	/^	MOSQ_ERR_ACL_DENIED = 12,$/;"	e	enum:mosq_err_t
 MOSQ_ERR_ACL_DENIED	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQ_ERR_ACL_DENIED = 12$/;"	v
-MOSQ_ERR_ACL_DENIED	lib/python/build/lib/mosquitto.py	/^MOSQ_ERR_ACL_DENIED = 12$/;"	v
 MOSQ_ERR_ACL_DENIED	lib/python/mosquitto.py	/^MOSQ_ERR_ACL_DENIED = 12$/;"	v
 MOSQ_ERR_AGAIN	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQ_ERR_AGAIN = -1$/;"	v
-MOSQ_ERR_AGAIN	lib/python/build/lib/mosquitto.py	/^MOSQ_ERR_AGAIN = -1$/;"	v
 MOSQ_ERR_AGAIN	lib/python/mosquitto.py	/^MOSQ_ERR_AGAIN = -1$/;"	v
 MOSQ_ERR_AUTH	lib/mosquitto.h	/^	MOSQ_ERR_AUTH = 11,$/;"	e	enum:mosq_err_t
 MOSQ_ERR_AUTH	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQ_ERR_AUTH = 11$/;"	v
-MOSQ_ERR_AUTH	lib/python/build/lib/mosquitto.py	/^MOSQ_ERR_AUTH = 11$/;"	v
 MOSQ_ERR_AUTH	lib/python/mosquitto.py	/^MOSQ_ERR_AUTH = 11$/;"	v
 MOSQ_ERR_CONN_LOST	lib/mosquitto.h	/^	MOSQ_ERR_CONN_LOST = 7,$/;"	e	enum:mosq_err_t
 MOSQ_ERR_CONN_LOST	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQ_ERR_CONN_LOST = 7$/;"	v
-MOSQ_ERR_CONN_LOST	lib/python/build/lib/mosquitto.py	/^MOSQ_ERR_CONN_LOST = 7$/;"	v
 MOSQ_ERR_CONN_LOST	lib/python/mosquitto.py	/^MOSQ_ERR_CONN_LOST = 7$/;"	v
 MOSQ_ERR_CONN_PENDING	lib/mosquitto.h	/^	MOSQ_ERR_CONN_PENDING = -1,$/;"	e	enum:mosq_err_t
 MOSQ_ERR_CONN_REFUSED	lib/mosquitto.h	/^	MOSQ_ERR_CONN_REFUSED = 5,$/;"	e	enum:mosq_err_t
 MOSQ_ERR_CONN_REFUSED	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQ_ERR_CONN_REFUSED = 5$/;"	v
-MOSQ_ERR_CONN_REFUSED	lib/python/build/lib/mosquitto.py	/^MOSQ_ERR_CONN_REFUSED = 5$/;"	v
 MOSQ_ERR_CONN_REFUSED	lib/python/mosquitto.py	/^MOSQ_ERR_CONN_REFUSED = 5$/;"	v
 MOSQ_ERR_EAI	lib/mosquitto.h	/^	MOSQ_ERR_EAI = 15$/;"	e	enum:mosq_err_t
 MOSQ_ERR_ERRNO	lib/mosquitto.h	/^	MOSQ_ERR_ERRNO = 14,$/;"	e	enum:mosq_err_t
 MOSQ_ERR_ERRNO	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQ_ERR_ERRNO = 14$/;"	v
-MOSQ_ERR_ERRNO	lib/python/build/lib/mosquitto.py	/^MOSQ_ERR_ERRNO = 14$/;"	v
 MOSQ_ERR_ERRNO	lib/python/mosquitto.py	/^MOSQ_ERR_ERRNO = 14$/;"	v
 MOSQ_ERR_INVAL	lib/mosquitto.h	/^	MOSQ_ERR_INVAL = 3,$/;"	e	enum:mosq_err_t
 MOSQ_ERR_INVAL	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQ_ERR_INVAL = 3$/;"	v
-MOSQ_ERR_INVAL	lib/python/build/lib/mosquitto.py	/^MOSQ_ERR_INVAL = 3$/;"	v
 MOSQ_ERR_INVAL	lib/python/mosquitto.py	/^MOSQ_ERR_INVAL = 3$/;"	v
 MOSQ_ERR_NOMEM	lib/mosquitto.h	/^	MOSQ_ERR_NOMEM = 1,$/;"	e	enum:mosq_err_t
 MOSQ_ERR_NOMEM	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQ_ERR_NOMEM = 1$/;"	v
-MOSQ_ERR_NOMEM	lib/python/build/lib/mosquitto.py	/^MOSQ_ERR_NOMEM = 1$/;"	v
 MOSQ_ERR_NOMEM	lib/python/mosquitto.py	/^MOSQ_ERR_NOMEM = 1$/;"	v
 MOSQ_ERR_NOT_FOUND	lib/mosquitto.h	/^	MOSQ_ERR_NOT_FOUND = 6,$/;"	e	enum:mosq_err_t
 MOSQ_ERR_NOT_FOUND	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQ_ERR_NOT_FOUND = 6$/;"	v
-MOSQ_ERR_NOT_FOUND	lib/python/build/lib/mosquitto.py	/^MOSQ_ERR_NOT_FOUND = 6$/;"	v
 MOSQ_ERR_NOT_FOUND	lib/python/mosquitto.py	/^MOSQ_ERR_NOT_FOUND = 6$/;"	v
 MOSQ_ERR_NOT_SUPPORTED	lib/mosquitto.h	/^	MOSQ_ERR_NOT_SUPPORTED = 10,$/;"	e	enum:mosq_err_t
 MOSQ_ERR_NOT_SUPPORTED	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQ_ERR_NOT_SUPPORTED = 10$/;"	v
-MOSQ_ERR_NOT_SUPPORTED	lib/python/build/lib/mosquitto.py	/^MOSQ_ERR_NOT_SUPPORTED = 10$/;"	v
 MOSQ_ERR_NOT_SUPPORTED	lib/python/mosquitto.py	/^MOSQ_ERR_NOT_SUPPORTED = 10$/;"	v
 MOSQ_ERR_NO_CONN	lib/mosquitto.h	/^	MOSQ_ERR_NO_CONN = 4,$/;"	e	enum:mosq_err_t
 MOSQ_ERR_NO_CONN	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQ_ERR_NO_CONN = 4$/;"	v
-MOSQ_ERR_NO_CONN	lib/python/build/lib/mosquitto.py	/^MOSQ_ERR_NO_CONN = 4$/;"	v
 MOSQ_ERR_NO_CONN	lib/python/mosquitto.py	/^MOSQ_ERR_NO_CONN = 4$/;"	v
 MOSQ_ERR_PAYLOAD_SIZE	lib/mosquitto.h	/^	MOSQ_ERR_PAYLOAD_SIZE = 9,$/;"	e	enum:mosq_err_t
 MOSQ_ERR_PAYLOAD_SIZE	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQ_ERR_PAYLOAD_SIZE = 9$/;"	v
-MOSQ_ERR_PAYLOAD_SIZE	lib/python/build/lib/mosquitto.py	/^MOSQ_ERR_PAYLOAD_SIZE = 9$/;"	v
 MOSQ_ERR_PAYLOAD_SIZE	lib/python/mosquitto.py	/^MOSQ_ERR_PAYLOAD_SIZE = 9$/;"	v
 MOSQ_ERR_PROTOCOL	lib/mosquitto.h	/^	MOSQ_ERR_PROTOCOL = 2,$/;"	e	enum:mosq_err_t
 MOSQ_ERR_PROTOCOL	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQ_ERR_PROTOCOL = 2$/;"	v
-MOSQ_ERR_PROTOCOL	lib/python/build/lib/mosquitto.py	/^MOSQ_ERR_PROTOCOL = 2$/;"	v
 MOSQ_ERR_PROTOCOL	lib/python/mosquitto.py	/^MOSQ_ERR_PROTOCOL = 2$/;"	v
 MOSQ_ERR_SUCCESS	lib/mosquitto.h	/^	MOSQ_ERR_SUCCESS = 0,$/;"	e	enum:mosq_err_t
 MOSQ_ERR_SUCCESS	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQ_ERR_SUCCESS = 0$/;"	v
-MOSQ_ERR_SUCCESS	lib/python/build/lib/mosquitto.py	/^MOSQ_ERR_SUCCESS = 0$/;"	v
 MOSQ_ERR_SUCCESS	lib/python/mosquitto.py	/^MOSQ_ERR_SUCCESS = 0$/;"	v
 MOSQ_ERR_TLS	lib/mosquitto.h	/^	MOSQ_ERR_TLS = 8,$/;"	e	enum:mosq_err_t
 MOSQ_ERR_TLS	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQ_ERR_TLS = 8$/;"	v
-MOSQ_ERR_TLS	lib/python/build/lib/mosquitto.py	/^MOSQ_ERR_TLS = 8$/;"	v
 MOSQ_ERR_TLS	lib/python/mosquitto.py	/^MOSQ_ERR_TLS = 8$/;"	v
 MOSQ_ERR_UNKNOWN	lib/mosquitto.h	/^	MOSQ_ERR_UNKNOWN = 13,$/;"	e	enum:mosq_err_t
 MOSQ_ERR_UNKNOWN	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQ_ERR_UNKNOWN = 13$/;"	v
-MOSQ_ERR_UNKNOWN	lib/python/build/lib/mosquitto.py	/^MOSQ_ERR_UNKNOWN = 13$/;"	v
 MOSQ_ERR_UNKNOWN	lib/python/mosquitto.py	/^MOSQ_ERR_UNKNOWN = 13$/;"	v
 MOSQ_LOG_ALL	lib/mosquitto.h	81;"	d
 MOSQ_LOG_DEBUG	lib/mosquitto.h	78;"	d
 MOSQ_LOG_DEBUG	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQ_LOG_DEBUG = 0x10$/;"	v
-MOSQ_LOG_DEBUG	lib/python/build/lib/mosquitto.py	/^MOSQ_LOG_DEBUG = 0x10$/;"	v
 MOSQ_LOG_DEBUG	lib/python/mosquitto.py	/^MOSQ_LOG_DEBUG = 0x10$/;"	v
 MOSQ_LOG_ERR	lib/mosquitto.h	77;"	d
 MOSQ_LOG_ERR	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQ_LOG_ERR = 0x08$/;"	v
-MOSQ_LOG_ERR	lib/python/build/lib/mosquitto.py	/^MOSQ_LOG_ERR = 0x08$/;"	v
 MOSQ_LOG_ERR	lib/python/mosquitto.py	/^MOSQ_LOG_ERR = 0x08$/;"	v
 MOSQ_LOG_INFO	lib/mosquitto.h	74;"	d
 MOSQ_LOG_INFO	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQ_LOG_INFO = 0x01$/;"	v
-MOSQ_LOG_INFO	lib/python/build/lib/mosquitto.py	/^MOSQ_LOG_INFO = 0x01$/;"	v
 MOSQ_LOG_INFO	lib/python/mosquitto.py	/^MOSQ_LOG_INFO = 0x01$/;"	v
 MOSQ_LOG_NONE	lib/mosquitto.h	73;"	d
 MOSQ_LOG_NOTICE	lib/mosquitto.h	75;"	d
 MOSQ_LOG_NOTICE	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQ_LOG_NOTICE = 0x02$/;"	v
-MOSQ_LOG_NOTICE	lib/python/build/lib/mosquitto.py	/^MOSQ_LOG_NOTICE = 0x02$/;"	v
 MOSQ_LOG_NOTICE	lib/python/mosquitto.py	/^MOSQ_LOG_NOTICE = 0x02$/;"	v
 MOSQ_LOG_SUBSCRIBE	lib/mosquitto.h	79;"	d
 MOSQ_LOG_UNSUBSCRIBE	lib/mosquitto.h	80;"	d
 MOSQ_LOG_WARNING	lib/mosquitto.h	76;"	d
 MOSQ_LOG_WARNING	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^MOSQ_LOG_WARNING = 0x04$/;"	v
-MOSQ_LOG_WARNING	lib/python/build/lib/mosquitto.py	/^MOSQ_LOG_WARNING = 0x04$/;"	v
 MOSQ_LOG_WARNING	lib/python/mosquitto.py	/^MOSQ_LOG_WARNING = 0x04$/;"	v
 MOSQ_LSB	lib/net_mosq.h	67;"	d
 MOSQ_MQTT_ID_MAX_LENGTH	lib/mosquitto.h	105;"	d
@@ -370,16 +334,12 @@ MUR_TWO_TWO	src/uthash.h	532;"	d
 MUR_TWO_TWO	src/uthash.h	536;"	d
 Mosquitto	lib/jsws/mosquitto.js	/^function Mosquitto()$/;"	c
 Mosquitto	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^class Mosquitto:$/;"	c
-Mosquitto	lib/python/build/lib/mosquitto.py	/^class Mosquitto:$/;"	c
 Mosquitto	lib/python/mosquitto.py	/^class Mosquitto:$/;"	c
 MosquittoInPacket	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^class MosquittoInPacket:$/;"	c
-MosquittoInPacket	lib/python/build/lib/mosquitto.py	/^class MosquittoInPacket:$/;"	c
 MosquittoInPacket	lib/python/mosquitto.py	/^class MosquittoInPacket:$/;"	c
 MosquittoMessage	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^class MosquittoMessage:$/;"	c
-MosquittoMessage	lib/python/build/lib/mosquitto.py	/^class MosquittoMessage:$/;"	c
 MosquittoMessage	lib/python/mosquitto.py	/^class MosquittoMessage:$/;"	c
 MosquittoPacket	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^class MosquittoPacket:$/;"	c
-MosquittoPacket	lib/python/build/lib/mosquitto.py	/^class MosquittoPacket:$/;"	c
 MosquittoPacket	lib/python/mosquitto.py	/^class MosquittoPacket:$/;"	c
 NO_DECLTYPE	src/uthash.h	39;"	d
 OBJS	test/Makefile	/^OBJS=context.o database.o logging.o memory.o net.o raw_send.o raw_send_client.o read_handle.o read_handle_client.o util.o$/;"	m
@@ -389,50 +349,40 @@ PERSIST_H	src/persist.h	31;"	d
 PINGREQ	lib/jsws/mosquitto.js	/^var PINGREQ = 0xC0;$/;"	v
 PINGREQ	lib/mqtt3_protocol.h	53;"	d
 PINGREQ	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^PINGREQ = 0xC0$/;"	v
-PINGREQ	lib/python/build/lib/mosquitto.py	/^PINGREQ = 0xC0$/;"	v
 PINGREQ	lib/python/mosquitto.py	/^PINGREQ = 0xC0$/;"	v
 PINGRESP	lib/jsws/mosquitto.js	/^var PINGRESP = 0xD0;$/;"	v
 PINGRESP	lib/mqtt3_protocol.h	54;"	d
 PINGRESP	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^PINGRESP = 0xD0$/;"	v
-PINGRESP	lib/python/build/lib/mosquitto.py	/^PINGRESP = 0xD0$/;"	v
 PINGRESP	lib/python/mosquitto.py	/^PINGRESP = 0xD0$/;"	v
 PROTOCOL_NAME	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    PROTOCOL_NAME = "MQIsdp"$/;"	v
 PROTOCOL_NAME	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    PROTOCOL_NAME = b"MQIsdp"$/;"	v
-PROTOCOL_NAME	lib/python/build/lib/mosquitto.py	/^    PROTOCOL_NAME = "MQIsdp"$/;"	v
-PROTOCOL_NAME	lib/python/build/lib/mosquitto.py	/^    PROTOCOL_NAME = b"MQIsdp"$/;"	v
 PROTOCOL_NAME	lib/python/mosquitto.py	/^    PROTOCOL_NAME = "MQIsdp"$/;"	v
 PROTOCOL_NAME	lib/python/mosquitto.py	/^    PROTOCOL_NAME = b"MQIsdp"$/;"	v
 PROTOCOL_NAME_v31	lib/mqtt3_protocol.h	35;"	d
 PROTOCOL_NAME_v311	lib/mqtt3_protocol.h	38;"	d
 PROTOCOL_VERSION	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^PROTOCOL_VERSION = 3$/;"	v
-PROTOCOL_VERSION	lib/python/build/lib/mosquitto.py	/^PROTOCOL_VERSION = 3$/;"	v
 PROTOCOL_VERSION	lib/python/mosquitto.py	/^PROTOCOL_VERSION = 3$/;"	v
 PROTOCOL_VERSION_v31	lib/mqtt3_protocol.h	36;"	d
 PROTOCOL_VERSION_v311	lib/mqtt3_protocol.h	39;"	d
 PUBACK	lib/jsws/mosquitto.js	/^var PUBACK = 0x40;$/;"	v
 PUBACK	lib/mqtt3_protocol.h	45;"	d
 PUBACK	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^PUBACK = 0x40$/;"	v
-PUBACK	lib/python/build/lib/mosquitto.py	/^PUBACK = 0x40$/;"	v
 PUBACK	lib/python/mosquitto.py	/^PUBACK = 0x40$/;"	v
 PUBCOMP	lib/jsws/mosquitto.js	/^var PUBCOMP = 0x70;$/;"	v
 PUBCOMP	lib/mqtt3_protocol.h	48;"	d
 PUBCOMP	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^PUBCOMP = 0x70$/;"	v
-PUBCOMP	lib/python/build/lib/mosquitto.py	/^PUBCOMP = 0x70$/;"	v
 PUBCOMP	lib/python/mosquitto.py	/^PUBCOMP = 0x70$/;"	v
 PUBLISH	lib/jsws/mosquitto.js	/^var PUBLISH = 0x30;$/;"	v
 PUBLISH	lib/mqtt3_protocol.h	44;"	d
 PUBLISH	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^PUBLISH = 0x30$/;"	v
-PUBLISH	lib/python/build/lib/mosquitto.py	/^PUBLISH = 0x30$/;"	v
 PUBLISH	lib/python/mosquitto.py	/^PUBLISH = 0x30$/;"	v
 PUBREC	lib/jsws/mosquitto.js	/^var PUBREC = 0x50;$/;"	v
 PUBREC	lib/mqtt3_protocol.h	46;"	d
 PUBREC	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^PUBREC = 0x50$/;"	v
-PUBREC	lib/python/build/lib/mosquitto.py	/^PUBREC = 0x50$/;"	v
 PUBREC	lib/python/mosquitto.py	/^PUBREC = 0x50$/;"	v
 PUBREL	lib/jsws/mosquitto.js	/^var PUBREL = 0x60;$/;"	v
 PUBREL	lib/mqtt3_protocol.h	47;"	d
 PUBREL	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^PUBREL = 0x60$/;"	v
-PUBREL	lib/python/build/lib/mosquitto.py	/^PUBREL = 0x60$/;"	v
 PUBREL	lib/python/mosquitto.py	/^PUBREL = 0x60$/;"	v
 REAL_WITH_MEMORY_TRACKING	lib/memory_mosq.h	37;"	d
 REAL_WITH_TLS_PSK	lib/tls_mosq.h	38;"	d
@@ -445,12 +395,10 @@ STATUS_WAITING	client/pub_client.c	55;"	d	file:
 SUBACK	lib/jsws/mosquitto.js	/^var SUBACK = 0x90;$/;"	v
 SUBACK	lib/mqtt3_protocol.h	50;"	d
 SUBACK	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^SUBACK = 0x90$/;"	v
-SUBACK	lib/python/build/lib/mosquitto.py	/^SUBACK = 0x90$/;"	v
 SUBACK	lib/python/mosquitto.py	/^SUBACK = 0x90$/;"	v
 SUBSCRIBE	lib/jsws/mosquitto.js	/^var SUBSCRIBE = 0x80;$/;"	v
 SUBSCRIBE	lib/mqtt3_protocol.h	49;"	d
 SUBSCRIBE	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^SUBSCRIBE = 0x80$/;"	v
-SUBSCRIBE	lib/python/build/lib/mosquitto.py	/^SUBSCRIBE = 0x80$/;"	v
 SUBSCRIBE	lib/python/mosquitto.py	/^SUBSCRIBE = 0x80$/;"	v
 TEMPERATURE_CONVERSION_H	examples/temperature_conversion/temperature_conversion.h	2;"	d
 TIMESTAMP	config.mk	/^TIMESTAMP:=$(shell date "+%F %T%z")$/;"	m
@@ -458,12 +406,10 @@ UNAME	config.mk	/^UNAME:=$(shell uname -s)$/;"	m
 UNSUBACK	lib/jsws/mosquitto.js	/^var UNSUBACK = 0xB0;$/;"	v
 UNSUBACK	lib/mqtt3_protocol.h	52;"	d
 UNSUBACK	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^UNSUBACK = 0xB0$/;"	v
-UNSUBACK	lib/python/build/lib/mosquitto.py	/^UNSUBACK = 0xB0$/;"	v
 UNSUBACK	lib/python/mosquitto.py	/^UNSUBACK = 0xB0$/;"	v
 UNSUBSCRIBE	lib/jsws/mosquitto.js	/^var UNSUBSCRIBE = 0xA0;$/;"	v
 UNSUBSCRIBE	lib/mqtt3_protocol.h	51;"	d
 UNSUBSCRIBE	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^UNSUBSCRIBE = 0xA0$/;"	v
-UNSUBSCRIBE	lib/python/build/lib/mosquitto.py	/^UNSUBSCRIBE = 0xA0$/;"	v
 UNSUBSCRIBE	lib/python/mosquitto.py	/^UNSUBSCRIBE = 0xA0$/;"	v
 UTHASH_H	src/uthash.h	25;"	d
 UTHASH_VERSION	src/uthash.h	67;"	d
@@ -506,16 +452,11 @@ _WILL_MOSQ_H_	lib/will_mosq.h	31;"	d
 _WIN32_WINNT	lib/time_mosq.c	36;"	d	file:
 __attribute__	src/mosquitto_broker.h	43;"	d
 __del__	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def __del__(self):$/;"	m	class:Mosquitto	file:
-__del__	lib/python/build/lib/mosquitto.py	/^    def __del__(self):$/;"	m	class:Mosquitto	file:
 __del__	lib/python/mosquitto.py	/^    def __del__(self):$/;"	m	class:Mosquitto	file:
 __init__	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def __init__(self):$/;"	m	class:MosquittoInPacket
 __init__	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def __init__(self):$/;"	m	class:MosquittoMessage
 __init__	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def __init__(self, client_id="", clean_session=True, userdata=None):$/;"	m	class:Mosquitto
 __init__	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def __init__(self, command, packet, mid, qos):$/;"	m	class:MosquittoPacket
-__init__	lib/python/build/lib/mosquitto.py	/^    def __init__(self):$/;"	m	class:MosquittoInPacket
-__init__	lib/python/build/lib/mosquitto.py	/^    def __init__(self):$/;"	m	class:MosquittoMessage
-__init__	lib/python/build/lib/mosquitto.py	/^    def __init__(self, client_id="", clean_session=True, userdata=None):$/;"	m	class:Mosquitto
-__init__	lib/python/build/lib/mosquitto.py	/^    def __init__(self, command, packet, mid, qos):$/;"	m	class:MosquittoPacket
 __init__	lib/python/mosquitto.py	/^    def __init__(self):$/;"	m	class:MosquittoInPacket
 __init__	lib/python/mosquitto.py	/^    def __init__(self):$/;"	m	class:MosquittoMessage
 __init__	lib/python/mosquitto.py	/^    def __init__(self, client_id="", clean_session=True, userdata=None):$/;"	m	class:Mosquitto
@@ -527,7 +468,6 @@ _add_acl	src/security_default.c	/^int _add_acl(struct mosquitto_db *db, const ch
 _add_acl_pattern	src/security_default.c	/^int _add_acl_pattern(struct mosquitto_db *db, const char *topic, int access)$/;"	f
 _base64_decode	src/security_default.c	/^int _base64_decode(char *in, unsigned char **decoded, unsigned int *decoded_len)$/;"	f
 _check_keepalive	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _check_keepalive(self):$/;"	m	class:Mosquitto
-_check_keepalive	lib/python/build/lib/mosquitto.py	/^    def _check_keepalive(self):$/;"	m	class:Mosquitto
 _check_keepalive	lib/python/mosquitto.py	/^    def _check_keepalive(self):$/;"	m	class:Mosquitto
 _clientid_index_hash	src/mosquitto_broker.h	/^struct _clientid_index_hash{$/;"	s
 _conf_attempt_resolve	src/conf.c	/^static int _conf_attempt_resolve(const char *host, const char *text, int log, const char *msg)$/;"	f	file:
@@ -551,51 +491,36 @@ _db_sub_chunk_restore	src/db_dump/db_dump.c	/^static int _db_sub_chunk_restore(s
 _db_sub_chunk_restore	src/persist.c	/^static int _db_sub_chunk_restore(struct mosquitto_db *db, FILE *db_fptr)$/;"	f	file:
 _db_subs_retain_write	src/persist.c	/^static int _db_subs_retain_write(struct mosquitto_db *db, FILE *db_fptr, struct _mosquitto_subhier *node, const char *topic)$/;"	f	file:
 _easy_log	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _easy_log(self, level, buf):$/;"	m	class:Mosquitto
-_easy_log	lib/python/build/lib/mosquitto.py	/^    def _easy_log(self, level, buf):$/;"	m	class:Mosquitto
 _easy_log	lib/python/mosquitto.py	/^    def _easy_log(self, level, buf):$/;"	m	class:Mosquitto
 _free_acl	src/security_default.c	/^static void _free_acl(struct _mosquitto_acl *acl)$/;"	f	file:
 _handle_connack	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _handle_connack(self):$/;"	m	class:Mosquitto
-_handle_connack	lib/python/build/lib/mosquitto.py	/^    def _handle_connack(self):$/;"	m	class:Mosquitto
 _handle_connack	lib/python/mosquitto.py	/^    def _handle_connack(self):$/;"	m	class:Mosquitto
 _handle_pingreq	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _handle_pingreq(self):$/;"	m	class:Mosquitto
-_handle_pingreq	lib/python/build/lib/mosquitto.py	/^    def _handle_pingreq(self):$/;"	m	class:Mosquitto
 _handle_pingreq	lib/python/mosquitto.py	/^    def _handle_pingreq(self):$/;"	m	class:Mosquitto
 _handle_pingresp	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _handle_pingresp(self):$/;"	m	class:Mosquitto
-_handle_pingresp	lib/python/build/lib/mosquitto.py	/^    def _handle_pingresp(self):$/;"	m	class:Mosquitto
 _handle_pingresp	lib/python/mosquitto.py	/^    def _handle_pingresp(self):$/;"	m	class:Mosquitto
 _handle_pubackcomp	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _handle_pubackcomp(self, cmd):$/;"	m	class:Mosquitto
-_handle_pubackcomp	lib/python/build/lib/mosquitto.py	/^    def _handle_pubackcomp(self, cmd):$/;"	m	class:Mosquitto
 _handle_pubackcomp	lib/python/mosquitto.py	/^    def _handle_pubackcomp(self, cmd):$/;"	m	class:Mosquitto
 _handle_publish	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _handle_publish(self):$/;"	m	class:Mosquitto
-_handle_publish	lib/python/build/lib/mosquitto.py	/^    def _handle_publish(self):$/;"	m	class:Mosquitto
 _handle_publish	lib/python/mosquitto.py	/^    def _handle_publish(self):$/;"	m	class:Mosquitto
 _handle_pubrec	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _handle_pubrec(self):$/;"	m	class:Mosquitto
-_handle_pubrec	lib/python/build/lib/mosquitto.py	/^    def _handle_pubrec(self):$/;"	m	class:Mosquitto
 _handle_pubrec	lib/python/mosquitto.py	/^    def _handle_pubrec(self):$/;"	m	class:Mosquitto
 _handle_pubrel	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _handle_pubrel(self):$/;"	m	class:Mosquitto
-_handle_pubrel	lib/python/build/lib/mosquitto.py	/^    def _handle_pubrel(self):$/;"	m	class:Mosquitto
 _handle_pubrel	lib/python/mosquitto.py	/^    def _handle_pubrel(self):$/;"	m	class:Mosquitto
 _handle_suback	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _handle_suback(self):$/;"	m	class:Mosquitto
-_handle_suback	lib/python/build/lib/mosquitto.py	/^    def _handle_suback(self):$/;"	m	class:Mosquitto
 _handle_suback	lib/python/mosquitto.py	/^    def _handle_suback(self):$/;"	m	class:Mosquitto
 _handle_unsuback	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _handle_unsuback(self):$/;"	m	class:Mosquitto
-_handle_unsuback	lib/python/build/lib/mosquitto.py	/^    def _handle_unsuback(self):$/;"	m	class:Mosquitto
 _handle_unsuback	lib/python/mosquitto.py	/^    def _handle_unsuback(self):$/;"	m	class:Mosquitto
 _loop_rc_handle	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _loop_rc_handle(self, rc):$/;"	m	class:Mosquitto
-_loop_rc_handle	lib/python/build/lib/mosquitto.py	/^    def _loop_rc_handle(self, rc):$/;"	m	class:Mosquitto
 _loop_rc_handle	lib/python/mosquitto.py	/^    def _loop_rc_handle(self, rc):$/;"	m	class:Mosquitto
 _message_remove	src/database.c	/^static void _message_remove(struct mosquitto *context, struct mosquitto_client_msg **msg, struct mosquitto_client_msg *last)$/;"	f	file:
 _message_retry_check	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _message_retry_check(self):$/;"	m	class:Mosquitto
-_message_retry_check	lib/python/build/lib/mosquitto.py	/^    def _message_retry_check(self):$/;"	m	class:Mosquitto
 _message_retry_check	lib/python/mosquitto.py	/^    def _message_retry_check(self):$/;"	m	class:Mosquitto
 _message_update	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _message_update(self, mid, direction, state):$/;"	m	class:Mosquitto
-_message_update	lib/python/build/lib/mosquitto.py	/^    def _message_update(self, mid, direction, state):$/;"	m	class:Mosquitto
 _message_update	lib/python/mosquitto.py	/^    def _message_update(self, mid, direction, state):$/;"	m	class:Mosquitto
 _messages_reconnect_reset	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _messages_reconnect_reset(self):$/;"	m	class:Mosquitto
-_messages_reconnect_reset	lib/python/build/lib/mosquitto.py	/^    def _messages_reconnect_reset(self):$/;"	m	class:Mosquitto
 _messages_reconnect_reset	lib/python/mosquitto.py	/^    def _messages_reconnect_reset(self):$/;"	m	class:Mosquitto
 _mid_generate	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _mid_generate(self):$/;"	m	class:Mosquitto
-_mid_generate	lib/python/build/lib/mosquitto.py	/^    def _mid_generate(self):$/;"	m	class:Mosquitto
 _mid_generate	lib/python/mosquitto.py	/^    def _mid_generate(self):$/;"	m	class:Mosquitto
 _mosquitto_acl	src/mosquitto_broker.h	/^struct _mosquitto_acl{$/;"	s
 _mosquitto_acl_user	src/mosquitto_broker.h	/^struct _mosquitto_acl_user{$/;"	s
@@ -693,22 +618,16 @@ _mqtt3_bridge	src/mosquitto_broker.h	/^struct _mqtt3_bridge{$/;"	s
 _mqtt3_bridge_topic	src/mosquitto_broker.h	/^struct _mqtt3_bridge_topic{$/;"	s
 _mqtt3_listener	src/mosquitto_broker.h	/^struct _mqtt3_listener {$/;"	s
 _pack_remaining_length	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _pack_remaining_length(self, packet, remaining_length):$/;"	m	class:Mosquitto
-_pack_remaining_length	lib/python/build/lib/mosquitto.py	/^    def _pack_remaining_length(self, packet, remaining_length):$/;"	m	class:Mosquitto
 _pack_remaining_length	lib/python/mosquitto.py	/^    def _pack_remaining_length(self, packet, remaining_length):$/;"	m	class:Mosquitto
 _pack_str16	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _pack_str16(self, packet, data):$/;"	m	class:Mosquitto
-_pack_str16	lib/python/build/lib/mosquitto.py	/^    def _pack_str16(self, packet, data):$/;"	m	class:Mosquitto
 _pack_str16	lib/python/mosquitto.py	/^    def _pack_str16(self, packet, data):$/;"	m	class:Mosquitto
 _packet_handle	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _packet_handle(self):$/;"	m	class:Mosquitto
-_packet_handle	lib/python/build/lib/mosquitto.py	/^    def _packet_handle(self):$/;"	m	class:Mosquitto
 _packet_handle	lib/python/mosquitto.py	/^    def _packet_handle(self):$/;"	m	class:Mosquitto
 _packet_queue	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _packet_queue(self, command, packet, mid, qos):$/;"	m	class:Mosquitto
-_packet_queue	lib/python/build/lib/mosquitto.py	/^    def _packet_queue(self, command, packet, mid, qos):$/;"	m	class:Mosquitto
 _packet_queue	lib/python/mosquitto.py	/^    def _packet_queue(self, command, packet, mid, qos):$/;"	m	class:Mosquitto
 _packet_read	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _packet_read(self):$/;"	m	class:Mosquitto
-_packet_read	lib/python/build/lib/mosquitto.py	/^    def _packet_read(self):$/;"	m	class:Mosquitto
 _packet_read	lib/python/mosquitto.py	/^    def _packet_read(self):$/;"	m	class:Mosquitto
 _packet_write	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _packet_write(self):$/;"	m	class:Mosquitto
-_packet_write	lib/python/build/lib/mosquitto.py	/^    def _packet_write(self):$/;"	m	class:Mosquitto
 _packet_write	lib/python/mosquitto.py	/^    def _packet_write(self):$/;"	m	class:Mosquitto
 _psk_file_parse	src/security_default.c	/^static int _psk_file_parse(struct mosquitto_db *db)$/;"	f	file:
 _pw_digest	src/security_default.c	/^int _pw_digest(const char *password, const unsigned char *salt, unsigned int salt_len, unsigned char *hash, unsigned int *hash_len)$/;"	f
@@ -716,43 +635,30 @@ _pwfile_parse	src/security_default.c	/^static int _pwfile_parse(const char *file
 _retain_process	src/subs.c	/^static int _retain_process(struct mosquitto_db *db, struct mosquitto_msg_store *retained, struct mosquitto *context, const char *sub, int sub_qos)$/;"	f	file:
 _retain_search	src/subs.c	/^static int _retain_search(struct mosquitto_db *db, struct _mosquitto_subhier *subhier, struct _sub_token *tokens, struct mosquitto *context, const char *sub, int sub_qos, int level)$/;"	f	file:
 _send_command_with_mid	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _send_command_with_mid(self, command, mid, dup):$/;"	m	class:Mosquitto
-_send_command_with_mid	lib/python/build/lib/mosquitto.py	/^    def _send_command_with_mid(self, command, mid, dup):$/;"	m	class:Mosquitto
 _send_command_with_mid	lib/python/mosquitto.py	/^    def _send_command_with_mid(self, command, mid, dup):$/;"	m	class:Mosquitto
 _send_connect	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _send_connect(self, keepalive, clean_session):$/;"	m	class:Mosquitto
-_send_connect	lib/python/build/lib/mosquitto.py	/^    def _send_connect(self, keepalive, clean_session):$/;"	m	class:Mosquitto
 _send_connect	lib/python/mosquitto.py	/^    def _send_connect(self, keepalive, clean_session):$/;"	m	class:Mosquitto
 _send_disconnect	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _send_disconnect(self):$/;"	m	class:Mosquitto
-_send_disconnect	lib/python/build/lib/mosquitto.py	/^    def _send_disconnect(self):$/;"	m	class:Mosquitto
 _send_disconnect	lib/python/mosquitto.py	/^    def _send_disconnect(self):$/;"	m	class:Mosquitto
 _send_pingreq	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _send_pingreq(self):$/;"	m	class:Mosquitto
-_send_pingreq	lib/python/build/lib/mosquitto.py	/^    def _send_pingreq(self):$/;"	m	class:Mosquitto
 _send_pingreq	lib/python/mosquitto.py	/^    def _send_pingreq(self):$/;"	m	class:Mosquitto
 _send_pingresp	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _send_pingresp(self):$/;"	m	class:Mosquitto
-_send_pingresp	lib/python/build/lib/mosquitto.py	/^    def _send_pingresp(self):$/;"	m	class:Mosquitto
 _send_pingresp	lib/python/mosquitto.py	/^    def _send_pingresp(self):$/;"	m	class:Mosquitto
 _send_puback	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _send_puback(self, mid):$/;"	m	class:Mosquitto
-_send_puback	lib/python/build/lib/mosquitto.py	/^    def _send_puback(self, mid):$/;"	m	class:Mosquitto
 _send_puback	lib/python/mosquitto.py	/^    def _send_puback(self, mid):$/;"	m	class:Mosquitto
 _send_pubcomp	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _send_pubcomp(self, mid):$/;"	m	class:Mosquitto
-_send_pubcomp	lib/python/build/lib/mosquitto.py	/^    def _send_pubcomp(self, mid):$/;"	m	class:Mosquitto
 _send_pubcomp	lib/python/mosquitto.py	/^    def _send_pubcomp(self, mid):$/;"	m	class:Mosquitto
 _send_publish	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _send_publish(self, mid, topic, payload=None, qos=0, retain=False, dup=False):$/;"	m	class:Mosquitto
-_send_publish	lib/python/build/lib/mosquitto.py	/^    def _send_publish(self, mid, topic, payload=None, qos=0, retain=False, dup=False):$/;"	m	class:Mosquitto
 _send_publish	lib/python/mosquitto.py	/^    def _send_publish(self, mid, topic, payload=None, qos=0, retain=False, dup=False):$/;"	m	class:Mosquitto
 _send_pubrec	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _send_pubrec(self, mid):$/;"	m	class:Mosquitto
-_send_pubrec	lib/python/build/lib/mosquitto.py	/^    def _send_pubrec(self, mid):$/;"	m	class:Mosquitto
 _send_pubrec	lib/python/mosquitto.py	/^    def _send_pubrec(self, mid):$/;"	m	class:Mosquitto
 _send_pubrel	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _send_pubrel(self, mid, dup=False):$/;"	m	class:Mosquitto
-_send_pubrel	lib/python/build/lib/mosquitto.py	/^    def _send_pubrel(self, mid, dup=False):$/;"	m	class:Mosquitto
 _send_pubrel	lib/python/mosquitto.py	/^    def _send_pubrel(self, mid, dup=False):$/;"	m	class:Mosquitto
 _send_simple_command	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _send_simple_command(self, command):$/;"	m	class:Mosquitto
-_send_simple_command	lib/python/build/lib/mosquitto.py	/^    def _send_simple_command(self, command):$/;"	m	class:Mosquitto
 _send_simple_command	lib/python/mosquitto.py	/^    def _send_simple_command(self, command):$/;"	m	class:Mosquitto
 _send_subscribe	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _send_subscribe(self, dup, topics):$/;"	m	class:Mosquitto
-_send_subscribe	lib/python/build/lib/mosquitto.py	/^    def _send_subscribe(self, dup, topics):$/;"	m	class:Mosquitto
 _send_subscribe	lib/python/mosquitto.py	/^    def _send_subscribe(self, dup, topics):$/;"	m	class:Mosquitto
 _send_unsubscribe	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _send_unsubscribe(self, dup, topics):$/;"	m	class:Mosquitto
-_send_unsubscribe	lib/python/build/lib/mosquitto.py	/^    def _send_unsubscribe(self, dup, topics):$/;"	m	class:Mosquitto
 _send_unsubscribe	lib/python/mosquitto.py	/^    def _send_unsubscribe(self, dup, topics):$/;"	m	class:Mosquitto
 _sub_add	src/subs.c	/^static int _sub_add(struct mosquitto_db *db, struct mosquitto *context, int qos, struct _mosquitto_subhier *subhier, struct _sub_token *tokens)$/;"	f	file:
 _sub_remove	src/subs.c	/^static int _sub_remove(struct mosquitto_db *db, struct mosquitto *context, struct _mosquitto_subhier *subhier, struct _sub_token *tokens)$/;"	f	file:
@@ -764,18 +670,14 @@ _subs_process	src/subs.c	/^static int _subs_process(struct mosquitto_db *db, str
 _sys_update_clients	src/sys_tree.c	/^static void _sys_update_clients(struct mosquitto_db *db, char *buf)$/;"	f	file:
 _sys_update_memory	src/sys_tree.c	/^static void _sys_update_memory(struct mosquitto_db *db, char *buf)$/;"	f	file:
 _thread_main	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _thread_main(self):$/;"	m	class:Mosquitto
-_thread_main	lib/python/build/lib/mosquitto.py	/^    def _thread_main(self):$/;"	m	class:Mosquitto
 _thread_main	lib/python/mosquitto.py	/^    def _thread_main(self):$/;"	m	class:Mosquitto
 _tls_match_hostname	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _tls_match_hostname(self):$/;"	m	class:Mosquitto
-_tls_match_hostname	lib/python/build/lib/mosquitto.py	/^    def _tls_match_hostname(self):$/;"	m	class:Mosquitto
 _tls_match_hostname	lib/python/mosquitto.py	/^    def _tls_match_hostname(self):$/;"	m	class:Mosquitto
 _topic_wildcard_len_check	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _topic_wildcard_len_check(self, topic):$/;"	m	class:Mosquitto
-_topic_wildcard_len_check	lib/python/build/lib/mosquitto.py	/^    def _topic_wildcard_len_check(self, topic):$/;"	m	class:Mosquitto
 _topic_wildcard_len_check	lib/python/mosquitto.py	/^    def _topic_wildcard_len_check(self, topic):$/;"	m	class:Mosquitto
 _unpwd_cleanup	src/security_default.c	/^static int _unpwd_cleanup(struct _mosquitto_unpwd **root, bool reload)$/;"	f	file:
 _unpwd_file_parse	src/security_default.c	/^static int _unpwd_file_parse(struct mosquitto_db *db)$/;"	f	file:
 _update_inflight	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def _update_inflight(self):$/;"	m	class:Mosquitto
-_update_inflight	lib/python/build/lib/mosquitto.py	/^    def _update_inflight(self):$/;"	m	class:Mosquitto
 _update_inflight	lib/python/mosquitto.py	/^    def _update_inflight(self):$/;"	m	class:Mosquitto
 _windows_time_version_check	lib/time_mosq.c	/^void _windows_time_version_check(void)$/;"	f
 access	src/mosquitto_broker.h	/^	int access;$/;"	m	struct:_mosquitto_acl
@@ -794,6 +696,8 @@ allow_anonymous	src/mosquitto_broker.h	/^	bool allow_anonymous;$/;"	m	struct:mqt
 allow_duplicate_messages	src/mosquitto_broker.h	/^	bool allow_duplicate_messages;$/;"	m	struct:mqtt3_config
 allow_severity	src/mosquitto.c	/^int allow_severity = LOG_INFO;$/;"	v
 allow_zero_length_clientid	src/mosquitto_broker.h	/^	bool allow_zero_length_clientid;$/;"	m	struct:mqtt3_config
+attr	protect/trecv.py	/^attr = {}$/;"	v
+attrlist	protect/trecv.py	/^attrlist = ["rc", "rp", "rep", "rao"]$/;"	v
 auth_option_count	src/mosquitto_broker.h	/^	int auth_option_count;$/;"	m	struct:mqtt3_config
 auth_options	src/mosquitto_broker.h	/^	struct mosquitto_auth_opt *auth_options;$/;"	m	struct:mqtt3_config	typeref:struct:mqtt3_config::mosquitto_auth_opt
 auth_plugin	src/mosquitto_broker.h	/^	char *auth_plugin;$/;"	m	struct:mqtt3_config
@@ -887,15 +791,15 @@ calc_load	src/sys_tree.c	/^static void calc_load(struct mosquitto_db *db, char *
 callback_mutex	lib/mosquitto_internal.h	/^	pthread_mutex_t callback_mutex;$/;"	m	struct:mosquitto
 capath	src/mosquitto_broker.h	/^	char *capath;$/;"	m	struct:_mqtt3_listener
 certfile	src/mosquitto_broker.h	/^	char *certfile;$/;"	m	struct:_mqtt3_listener
+check_protocol	protect/trecv.py	/^def check_protocol(payload):$/;"	f
 children	src/mosquitto_broker.h	/^	struct _mosquitto_subhier *children;$/;"	m	struct:_mosquitto_subhier	typeref:struct:_mosquitto_subhier::_mosquitto_subhier
 ciphers	src/mosquitto_broker.h	/^	char *ciphers;$/;"	m	struct:_mqtt3_listener
 classifiers	lib/python/setup.py	/^    classifiers=[$/;"	v
 clean_session	lib/mosquitto_internal.h	/^	bool clean_session;$/;"	m	struct:mosquitto
 clean_session	src/mosquitto_broker.h	/^	bool clean_session;$/;"	m	struct:_mqtt3_bridge
 cleanup	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def cleanup(self):$/;"	m	class:MosquittoInPacket
-cleanup	lib/python/build/lib/mosquitto.py	/^    def cleanup(self):$/;"	m	class:MosquittoInPacket
 cleanup	lib/python/mosquitto.py	/^    def cleanup(self):$/;"	m	class:MosquittoInPacket
-client	protect/conn_test.py	/^    client = mqtt.Client("conn_test"+str(i), True)$/;"	v
+client	protect/conn_test.py	/^    client = mqtt.Client("conn_test", True)$/;"	v
 client	protect/err_pro_test.py	/^client = mqtt.Client("python_client_test", True)$/;"	v
 client	protect/err_topic_test.py	/^client = mqtt.Client("python_client_test", True)$/;"	v
 client	protect/pub0_retain.py	/^client = mqtt.Client("python_client_test", True)$/;"	v
@@ -1162,18 +1066,15 @@ connack_packet	test/lib/08-ssl-connect-no-auth.py	/^connack_packet = mosq_test.g
 connack_packet_ok	test/broker/07-will-acl-denied.py	/^connack_packet_ok = mosq_test.gen_connack(rc=0)$/;"	v
 connack_string	lib/cpp/mosquittopp.cpp	/^const char* connack_string(int connack_code)$/;"	f	namespace:mosqpp
 connack_string	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^def connack_string(connack_code):$/;"	f
-connack_string	lib/python/build/lib/mosquitto.py	/^def connack_string(connack_code):$/;"	f
 connack_string	lib/python/mosquitto.py	/^def connack_string(connack_code):$/;"	f
 connect	lib/cpp/mosquittopp.cpp	/^int mosquittopp::connect(const char *host, int port, int keepalive)$/;"	f	class:mosqpp::mosquittopp
 connect	lib/cpp/mosquittopp.cpp	/^int mosquittopp::connect(const char *host, int port, int keepalive, const char *bind_address)$/;"	f	class:mosqpp::mosquittopp
 connect	lib/jsws/mosquitto.js	/^	connect : function(url, keepalive){$/;"	m	class:Mosquitto
 connect	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def connect(self, host, port=1883, keepalive=60, bind_address=""):$/;"	m	class:Mosquitto
-connect	lib/python/build/lib/mosquitto.py	/^    def connect(self, host, port=1883, keepalive=60, bind_address=""):$/;"	m	class:Mosquitto
 connect	lib/python/mosquitto.py	/^    def connect(self, host, port=1883, keepalive=60, bind_address=""):$/;"	m	class:Mosquitto
 connect_async	lib/cpp/mosquittopp.cpp	/^int mosquittopp::connect_async(const char *host, int port, int keepalive)$/;"	f	class:mosqpp::mosquittopp
 connect_async	lib/cpp/mosquittopp.cpp	/^int mosquittopp::connect_async(const char *host, int port, int keepalive, const char *bind_address)$/;"	f	class:mosqpp::mosquittopp
 connect_async	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def connect_async(self, host, port=1883, keepalive=60, bind_address=""):$/;"	m	class:Mosquitto
-connect_async	lib/python/build/lib/mosquitto.py	/^    def connect_async(self, host, port=1883, keepalive=60, bind_address=""):$/;"	m	class:Mosquitto
 connect_async	lib/python/mosquitto.py	/^    def connect_async(self, host, port=1883, keepalive=60, bind_address=""):$/;"	m	class:Mosquitto
 connect_callback	examples/mysql_log/mysql_log.c	/^void connect_callback(struct mosquitto *mosq, void *obj, int result)$/;"	f
 connect_packet	test/broker/01-connect-anon-denied.py	/^connect_packet = mosq_test.gen_connect("connect-anon-test", keepalive=keepalive)$/;"	v
@@ -1316,7 +1217,6 @@ direction	src/mosquitto_broker.h	/^	enum mqtt3_bridge_direction direction;$/;"	m
 disconnect	lib/cpp/mosquittopp.cpp	/^int mosquittopp::disconnect()$/;"	f	class:mosqpp::mosquittopp
 disconnect	lib/jsws/mosquitto.js	/^	disconnect : function(){$/;"	m	class:Mosquitto
 disconnect	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def disconnect(self):$/;"	m	class:Mosquitto
-disconnect	lib/python/build/lib/mosquitto.py	/^    def disconnect(self):$/;"	m	class:Mosquitto
 disconnect	lib/python/mosquitto.py	/^    def disconnect(self):$/;"	m	class:Mosquitto
 disconnect_packet	test/broker/05-clean-session-qos1.py	/^disconnect_packet = mosq_test.gen_disconnect()$/;"	v
 disconnect_packet	test/broker/06-bridge-reconnect-local-out-helper.py	/^disconnect_packet = mosq_test.gen_disconnect()$/;"	v
@@ -1378,7 +1278,6 @@ env	test/lib/09-util-topic-matching.py	/^env = dict(os.environ)$/;"	v
 env	test/lib/09-util-topic-tokenise.py	/^env = dict(os.environ)$/;"	v
 eol	client/sub_client.c	/^	bool eol;$/;"	m	struct:userdata	file:
 error_string	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^def error_string(mosq_errno):$/;"	f
-error_string	lib/python/build/lib/mosquitto.py	/^def error_string(mosq_errno):$/;"	f
 error_string	lib/python/mosquitto.py	/^def error_string(mosq_errno):$/;"	f
 expand_mult	src/uthash.h	/^   unsigned expand_mult;$/;"	m	struct:UT_hash_bucket
 expect_packet	test/mosq_test.py	/^def expect_packet(sock, name, expected):$/;"	f
@@ -1453,7 +1352,7 @@ hh_next	src/uthash.h	/^   struct UT_hash_handle *hh_next;   \/* next hh in bucke
 hh_prev	src/uthash.h	/^   struct UT_hash_handle *hh_prev;   \/* previous hh in bucket order    *\/$/;"	m	struct:UT_hash_handle	typeref:struct:UT_hash_handle::UT_hash_handle
 hho	src/uthash.h	/^   ptrdiff_t hho; \/* hash handle offset (byte pos of hash handle in element *\/$/;"	m	struct:UT_hash_table
 host	lib/mosquitto_internal.h	/^	char *host;$/;"	m	struct:mosquitto
-host	protect/conn_test.py	/^host = "192.168.139.80"$/;"	v
+host	protect/conn_test.py	/^host = "localhost"$/;"	v
 host	protect/err_pro_test.py	/^host = "192.168.139.80"$/;"	v
 host	protect/err_topic_test.py	/^host = "192.168.139.80"$/;"	v
 host	protect/pub0_retain.py	/^host = "192.168.139.80"$/;"	v
@@ -1468,7 +1367,6 @@ host	protect/recv.py	/^host = "127.0.0.1"$/;"	v
 host	protect/send.py	/^host = "127.0.0.1"$/;"	v
 host	src/mosquitto_broker.h	/^	char *host;$/;"	m	struct:_mqtt3_listener
 hrc	test/broker/03-publish-b2c-disconnect-qos2.py	/^        hrc = pub.wait()$/;"	v
-i	protect/conn_test.py	/^i = 1$/;"	v
 id	lib/mosquitto_internal.h	/^	char *id;$/;"	m	struct:mosquitto
 id	src/mosquitto_broker.h	/^	char *id;$/;"	m	struct:_clientid_index_hash
 ideal_chain_maxlen	src/uthash.h	/^   unsigned ideal_chain_maxlen;$/;"	m	struct:UT_hash_table
@@ -1624,33 +1522,26 @@ log_type	src/mosquitto_broker.h	/^	int log_type;$/;"	m	struct:mqtt3_config
 log_type_set	src/conf.c	/^	int log_type_set;$/;"	m	struct:config_recurse	file:
 loop	lib/cpp/mosquittopp.cpp	/^int mosquittopp::loop(int timeout, int max_packets)$/;"	f	class:mosqpp::mosquittopp
 loop	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def loop(self, timeout=1.0, max_packets=1):$/;"	m	class:Mosquitto
-loop	lib/python/build/lib/mosquitto.py	/^    def loop(self, timeout=1.0, max_packets=1):$/;"	m	class:Mosquitto
 loop	lib/python/mosquitto.py	/^    def loop(self, timeout=1.0, max_packets=1):$/;"	m	class:Mosquitto
 loop_forever	lib/cpp/mosquittopp.cpp	/^int mosquittopp::loop_forever(int timeout, int max_packets)$/;"	f	class:mosqpp::mosquittopp
 loop_forever	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def loop_forever(self, timeout=1.0, max_packets=1):$/;"	m	class:Mosquitto
-loop_forever	lib/python/build/lib/mosquitto.py	/^    def loop_forever(self, timeout=1.0, max_packets=1):$/;"	m	class:Mosquitto
 loop_forever	lib/python/mosquitto.py	/^    def loop_forever(self, timeout=1.0, max_packets=1):$/;"	m	class:Mosquitto
 loop_handle_errors	src/loop.c	/^static void loop_handle_errors(struct mosquitto_db *db, struct pollfd *pollfds)$/;"	f	file:
 loop_handle_reads_writes	src/loop.c	/^static void loop_handle_reads_writes(struct mosquitto_db *db, struct pollfd *pollfds)$/;"	f	file:
 loop_misc	lib/cpp/mosquittopp.cpp	/^int mosquittopp::loop_misc()$/;"	f	class:mosqpp::mosquittopp
 loop_misc	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def loop_misc(self):$/;"	m	class:Mosquitto
-loop_misc	lib/python/build/lib/mosquitto.py	/^    def loop_misc(self):$/;"	m	class:Mosquitto
 loop_misc	lib/python/mosquitto.py	/^    def loop_misc(self):$/;"	m	class:Mosquitto
 loop_read	lib/cpp/mosquittopp.cpp	/^int mosquittopp::loop_read(int max_packets)$/;"	f	class:mosqpp::mosquittopp
 loop_read	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def loop_read(self, max_packets=1):$/;"	m	class:Mosquitto
-loop_read	lib/python/build/lib/mosquitto.py	/^    def loop_read(self, max_packets=1):$/;"	m	class:Mosquitto
 loop_read	lib/python/mosquitto.py	/^    def loop_read(self, max_packets=1):$/;"	m	class:Mosquitto
 loop_start	lib/cpp/mosquittopp.cpp	/^int mosquittopp::loop_start()$/;"	f	class:mosqpp::mosquittopp
 loop_start	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def loop_start(self):$/;"	m	class:Mosquitto
-loop_start	lib/python/build/lib/mosquitto.py	/^    def loop_start(self):$/;"	m	class:Mosquitto
 loop_start	lib/python/mosquitto.py	/^    def loop_start(self):$/;"	m	class:Mosquitto
 loop_stop	lib/cpp/mosquittopp.cpp	/^int mosquittopp::loop_stop(bool force)$/;"	f	class:mosqpp::mosquittopp
 loop_stop	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def loop_stop(self, force=False):$/;"	m	class:Mosquitto
-loop_stop	lib/python/build/lib/mosquitto.py	/^    def loop_stop(self, force=False):$/;"	m	class:Mosquitto
 loop_stop	lib/python/mosquitto.py	/^    def loop_stop(self, force=False):$/;"	m	class:Mosquitto
 loop_write	lib/cpp/mosquittopp.cpp	/^int mosquittopp::loop_write(int max_packets)$/;"	f	class:mosqpp::mosquittopp
 loop_write	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def loop_write(self, max_packets=1):$/;"	m	class:Mosquitto
-loop_write	lib/python/build/lib/mosquitto.py	/^    def loop_write(self, max_packets=1):$/;"	m	class:Mosquitto
 loop_write	lib/python/mosquitto.py	/^    def loop_write(self, max_packets=1):$/;"	m	class:Mosquitto
 m_mosq	lib/cpp/mosquittopp.h	/^		struct mosquitto *m_mosq;$/;"	m	class:mosqpp::mosquittopp	typeref:struct:mosqpp::mosquittopp::mosquitto
 magic	src/persist.h	/^const unsigned char magic[15] = {0x00, 0xB5, 0x00, 'm','o','s','q','u','i','t','t','o',' ','d','b'};$/;"	v
@@ -1658,6 +1549,7 @@ main	client/pub_client.c	/^int main(int argc, char *argv[])$/;"	f
 main	client/sub_client.c	/^int main(int argc, char *argv[])$/;"	f
 main	examples/mysql_log/mysql_log.c	/^int main(int argc, char *argv[])$/;"	f
 main	examples/temperature_conversion/main.cpp	/^int main(int argc, char *argv[])$/;"	f
+main	protect/trecv.py	/^def main():	$/;"	f
 main	src/db_dump/db_dump.c	/^int main(int argc, char *argv[])$/;"	f
 main	src/mosquitto.c	/^int main(int argc, char *argv[])$/;"	f
 main	src/mosquitto_passwd.c	/^int main(int argc, char *argv[])$/;"	f
@@ -1729,7 +1621,6 @@ max_inflight_messages	lib/mosquitto_internal.h	/^	int max_inflight_messages;$/;"
 max_inflight_messages	src/conf.c	/^	int max_inflight_messages;$/;"	m	struct:config_recurse	file:
 max_inflight_messages_set	lib/cpp/mosquittopp.cpp	/^int mosquittopp::max_inflight_messages_set(unsigned int max_inflight_messages)$/;"	f	class:mosqpp::mosquittopp
 max_inflight_messages_set	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def max_inflight_messages_set(self, inflight):$/;"	m	class:Mosquitto
-max_inflight_messages_set	lib/python/build/lib/mosquitto.py	/^    def max_inflight_messages_set(self, inflight):$/;"	m	class:Mosquitto
 max_inflight_messages_set	lib/python/mosquitto.py	/^    def max_inflight_messages_set(self, inflight):$/;"	m	class:Mosquitto
 max_memcount	lib/memory_mosq.c	/^static unsigned long max_memcount = 0;$/;"	v	file:
 max_queued	src/database.c	/^static int max_queued = 100;$/;"	v	file:
@@ -1742,7 +1633,6 @@ message_count	test/msgsps_sub.c	/^static int message_count = 0;$/;"	v	file:
 message_retry	lib/mosquitto_internal.h	/^	unsigned int message_retry;$/;"	m	struct:mosquitto
 message_retry_set	lib/cpp/mosquittopp.cpp	/^void mosquittopp::message_retry_set(unsigned int message_retry)$/;"	f	class:mosqpp::mosquittopp
 message_retry_set	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def message_retry_set(self, retry):$/;"	m	class:Mosquitto
-message_retry_set	lib/python/build/lib/mosquitto.py	/^    def message_retry_set(self, retry):$/;"	m	class:Mosquitto
 message_retry_set	lib/python/mosquitto.py	/^    def message_retry_set(self, retry):$/;"	m	class:Mosquitto
 message_size_limit	src/mosquitto_broker.h	/^	int message_size_limit;$/;"	m	struct:mqtt3_config
 messages_received	test/qos.c	/^struct msg_list *messages_received = NULL;$/;"	v	typeref:struct:msg_list
@@ -1861,37 +1751,29 @@ mosq	test/lib/python/08-ssl-connect-no-auth.test	/^mosq = mosquitto.Mosquitto("0
 mosq	test/lib/python/08-ssl-fake-cacert.test	/^mosq = mosquitto.Mosquitto("08-ssl-fake-cacert")$/;"	v
 mosq_cs_connect_async	lib/mosquitto_internal.h	/^	mosq_cs_connect_async = 3,$/;"	e	enum:mosquitto_client_state
 mosq_cs_connect_async	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^mosq_cs_connect_async = 3$/;"	v
-mosq_cs_connect_async	lib/python/build/lib/mosquitto.py	/^mosq_cs_connect_async = 3$/;"	v
 mosq_cs_connect_async	lib/python/mosquitto.py	/^mosq_cs_connect_async = 3$/;"	v
 mosq_cs_connect_pending	lib/mosquitto_internal.h	/^	mosq_cs_connect_pending = 4,$/;"	e	enum:mosquitto_client_state
 mosq_cs_connect_srv	lib/mosquitto_internal.h	/^	mosq_cs_connect_srv = 5$/;"	e	enum:mosquitto_client_state
 mosq_cs_connected	lib/mosquitto_internal.h	/^	mosq_cs_connected = 1,$/;"	e	enum:mosquitto_client_state
 mosq_cs_connected	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^mosq_cs_connected = 1$/;"	v
-mosq_cs_connected	lib/python/build/lib/mosquitto.py	/^mosq_cs_connected = 1$/;"	v
 mosq_cs_connected	lib/python/mosquitto.py	/^mosq_cs_connected = 1$/;"	v
 mosq_cs_disconnecting	lib/mosquitto_internal.h	/^	mosq_cs_disconnecting = 2,$/;"	e	enum:mosquitto_client_state
 mosq_cs_disconnecting	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^mosq_cs_disconnecting = 2$/;"	v
-mosq_cs_disconnecting	lib/python/build/lib/mosquitto.py	/^mosq_cs_disconnecting = 2$/;"	v
 mosq_cs_disconnecting	lib/python/mosquitto.py	/^mosq_cs_disconnecting = 2$/;"	v
 mosq_cs_new	lib/mosquitto_internal.h	/^	mosq_cs_new = 0,$/;"	e	enum:mosquitto_client_state
 mosq_cs_new	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^mosq_cs_new = 0$/;"	v
-mosq_cs_new	lib/python/build/lib/mosquitto.py	/^mosq_cs_new = 0$/;"	v
 mosq_cs_new	lib/python/mosquitto.py	/^mosq_cs_new = 0$/;"	v
 mosq_err_t	lib/mosquitto.h	/^enum mosq_err_t {$/;"	g
 mosq_md_in	lib/mosquitto_internal.h	/^	mosq_md_in = 0,$/;"	e	enum:mosquitto_msg_direction
 mosq_md_in	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^mosq_md_in = 1$/;"	v
-mosq_md_in	lib/python/build/lib/mosquitto.py	/^mosq_md_in = 1$/;"	v
 mosq_md_in	lib/python/mosquitto.py	/^mosq_md_in = 1$/;"	v
 mosq_md_invalid	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^mosq_md_invalid = 0$/;"	v
-mosq_md_invalid	lib/python/build/lib/mosquitto.py	/^mosq_md_invalid = 0$/;"	v
 mosq_md_invalid	lib/python/mosquitto.py	/^mosq_md_invalid = 0$/;"	v
 mosq_md_out	lib/mosquitto_internal.h	/^	mosq_md_out = 1$/;"	e	enum:mosquitto_msg_direction
 mosq_md_out	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^mosq_md_out = 2$/;"	v
-mosq_md_out	lib/python/build/lib/mosquitto.py	/^mosq_md_out = 2$/;"	v
 mosq_md_out	lib/python/mosquitto.py	/^mosq_md_out = 2$/;"	v
 mosq_ms_invalid	lib/mosquitto_internal.h	/^	mosq_ms_invalid = 0,$/;"	e	enum:mosquitto_msg_state
 mosq_ms_invalid	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^mosq_ms_invalid = 0,$/;"	v
-mosq_ms_invalid	lib/python/build/lib/mosquitto.py	/^mosq_ms_invalid = 0,$/;"	v
 mosq_ms_invalid	lib/python/mosquitto.py	/^mosq_ms_invalid = 0,$/;"	v
 mosq_ms_publish_qos0	lib/mosquitto_internal.h	/^	mosq_ms_publish_qos0 = 1,$/;"	e	enum:mosquitto_msg_state
 mosq_ms_publish_qos1	lib/mosquitto_internal.h	/^	mosq_ms_publish_qos1 = 2,$/;"	e	enum:mosquitto_msg_state
@@ -1905,16 +1787,12 @@ mosq_ms_wait_for_pubcomp	lib/mosquitto_internal.h	/^	mosq_ms_wait_for_pubcomp = 
 mosq_ms_wait_for_pubrec	lib/mosquitto_internal.h	/^	mosq_ms_wait_for_pubrec = 5,$/;"	e	enum:mosquitto_msg_state
 mosq_ms_wait_for_pubrel	lib/mosquitto_internal.h	/^	mosq_ms_wait_for_pubrel = 7,$/;"	e	enum:mosquitto_msg_state
 mosq_ms_wait_puback	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^mosq_ms_wait_puback = 1$/;"	v
-mosq_ms_wait_puback	lib/python/build/lib/mosquitto.py	/^mosq_ms_wait_puback = 1$/;"	v
 mosq_ms_wait_puback	lib/python/mosquitto.py	/^mosq_ms_wait_puback = 1$/;"	v
 mosq_ms_wait_pubcomp	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^mosq_ms_wait_pubcomp = 4$/;"	v
-mosq_ms_wait_pubcomp	lib/python/build/lib/mosquitto.py	/^mosq_ms_wait_pubcomp = 4$/;"	v
 mosq_ms_wait_pubcomp	lib/python/mosquitto.py	/^mosq_ms_wait_pubcomp = 4$/;"	v
 mosq_ms_wait_pubrec	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^mosq_ms_wait_pubrec = 2$/;"	v
-mosq_ms_wait_pubrec	lib/python/build/lib/mosquitto.py	/^mosq_ms_wait_pubrec = 2$/;"	v
 mosq_ms_wait_pubrec	lib/python/mosquitto.py	/^mosq_ms_wait_pubrec = 2$/;"	v
 mosq_ms_wait_pubrel	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^mosq_ms_wait_pubrel = 3$/;"	v
-mosq_ms_wait_pubrel	lib/python/build/lib/mosquitto.py	/^mosq_ms_wait_pubrel = 3$/;"	v
 mosq_ms_wait_pubrel	lib/python/mosquitto.py	/^mosq_ms_wait_pubrel = 3$/;"	v
 mosq_p_invalid	lib/mosquitto_internal.h	/^	mosq_p_invalid = 0,$/;"	e	enum:_mosquitto_protocol
 mosq_p_mqtt31	lib/mosquitto_internal.h	/^	mosq_p_mqtt31 = 1,$/;"	e	enum:_mosquitto_protocol
@@ -2179,6 +2057,7 @@ on_connect	protect/python_client.py	/^def on_connect(client, userdata, flags, rc
 on_connect	protect/python_mqtt.py	/^def on_connect(client, userdata, flags, rc):$/;"	f
 on_connect	protect/recv.py	/^def on_connect(client, userdata, flags, rc):$/;"	f
 on_connect	protect/send.py	/^def on_connect(client, userdata, flags, rc):$/;"	f
+on_connect	protect/trecv.py	/^def on_connect(client, userdata, flags, rc):$/;"	f
 on_connect	test/broker/c/08-tls-psk-bridge.c	/^void on_connect(struct mosquitto *mosq, void *obj, int rc)$/;"	f
 on_connect	test/broker/c/08-tls-psk-pub.c	/^void on_connect(struct mosquitto *mosq, void *obj, int rc)$/;"	f
 on_connect	test/lib/c/01-con-discon-success.c	/^void on_connect(struct mosquitto *mosq, void *obj, int rc)$/;"	f
@@ -2296,6 +2175,7 @@ on_message	protect/python_client.py	/^def on_message(client, userdata, msg):$/;"
 on_message	protect/python_mqtt.py	/^def on_message(client, userdata, msg):$/;"	f
 on_message	protect/recv.py	/^def on_message(client, userdata, msg):$/;"	f
 on_message	protect/send.py	/^def on_message(client, userdata, msg):$/;"	f
+on_message	protect/trecv.py	/^def on_message(client, userdata, msg):$/;"	f
 on_message	test/lib/c/03-publish-b2c-qos1.c	/^void on_message(struct mosquitto *mosq, void *obj, const struct mosquitto_message *msg)$/;"	f
 on_message	test/lib/c/03-publish-b2c-qos2.c	/^void on_message(struct mosquitto *mosq, void *obj, const struct mosquitto_message *msg)$/;"	f
 on_message	test/lib/cpp/03-publish-b2c-qos1.cpp	/^void mosquittopp_test::on_message(const struct mosquitto_message *msg)$/;"	f	class:mosquittopp_test
@@ -2537,7 +2417,6 @@ pubcomp_packet2	test/broker/02-subpub-qos2.py	/^pubcomp_packet2 = mosq_test.gen_
 publish	lib/cpp/mosquittopp.cpp	/^int mosquittopp::publish(int *mid, const char *topic, int payloadlen, const void *payload, int qos, bool retain)$/;"	f	class:mosqpp::mosquittopp
 publish	lib/jsws/mosquitto.js	/^	publish : function(topic, payload, qos, retain){$/;"	m	class:Mosquitto
 publish	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def publish(self, topic, payload=None, qos=0, retain=False):$/;"	m	class:Mosquitto
-publish	lib/python/build/lib/mosquitto.py	/^    def publish(self, topic, payload=None, qos=0, retain=False):$/;"	m	class:Mosquitto
 publish	lib/python/mosquitto.py	/^    def publish(self, topic, payload=None, qos=0, retain=False):$/;"	m	class:Mosquitto
 publish0_packet	test/broker/04-retain-qos1-qos0.py	/^publish0_packet = mosq_test.gen_publish("retain\/qos1\/test", qos=0, payload="retained message", retain=True)$/;"	v
 publish2_packet	test/broker/03-publish-b2c-disconnect-qos1.py	/^publish2_packet = mosq_test.gen_publish("qos1\/outgoing", qos=1, mid=mid, payload="outgoing-message")$/;"	v
@@ -2870,20 +2749,17 @@ read_e	src/persist.h	45;"	d
 received_count	test/qos.c	/^int received_count = 0;$/;"	v
 reconnect	lib/cpp/mosquittopp.cpp	/^int mosquittopp::reconnect()$/;"	f	class:mosqpp::mosquittopp
 reconnect	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def reconnect(self):$/;"	m	class:Mosquitto
-reconnect	lib/python/build/lib/mosquitto.py	/^    def reconnect(self):$/;"	m	class:Mosquitto
 reconnect	lib/python/mosquitto.py	/^    def reconnect(self):$/;"	m	class:Mosquitto
 reconnect_async	lib/cpp/mosquittopp.cpp	/^int mosquittopp::reconnect_async()$/;"	f	class:mosqpp::mosquittopp
 reconnect_delay	lib/mosquitto_internal.h	/^	unsigned int reconnect_delay;$/;"	m	struct:mosquitto
 reconnect_delay_max	lib/mosquitto_internal.h	/^	unsigned int reconnect_delay_max;$/;"	m	struct:mosquitto
 reconnect_delay_set	lib/cpp/mosquittopp.cpp	/^void mosquittopp::reconnect_delay_set(unsigned int reconnect_delay, unsigned int reconnect_delay_max, bool reconnect_exponential_backoff)$/;"	f	class:mosqpp::mosquittopp
 reconnect_delay_set	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def reconnect_delay_set(self, delay, delay_max, exponential_backoff):$/;"	m	class:Mosquitto
-reconnect_delay_set	lib/python/build/lib/mosquitto.py	/^    def reconnect_delay_set(self, delay, delay_max, exponential_backoff):$/;"	m	class:Mosquitto
 reconnect_delay_set	lib/python/mosquitto.py	/^    def reconnect_delay_set(self, delay, delay_max, exponential_backoff):$/;"	m	class:Mosquitto
 reconnect_exponential_backoff	lib/mosquitto_internal.h	/^	bool reconnect_exponential_backoff;$/;"	m	struct:mosquitto
 ref_count	src/mosquitto_broker.h	/^	int ref_count;$/;"	m	struct:mosquitto_msg_store
 reinitialise	lib/cpp/mosquittopp.cpp	/^int mosquittopp::reinitialise(const char *id, bool clean_session)$/;"	f	class:mosqpp::mosquittopp
 reinitialise	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def reinitialise(self, client_id="", clean_session=True, userdata=None):$/;"	m	class:Mosquitto
-reinitialise	lib/python/build/lib/mosquitto.py	/^    def reinitialise(self, client_id="", clean_session=True, userdata=None):$/;"	m	class:Mosquitto
 reinitialise	lib/python/mosquitto.py	/^    def reinitialise(self, client_id="", clean_session=True, userdata=None):$/;"	m	class:Mosquitto
 remaining_count	lib/mosquitto_internal.h	/^	uint8_t remaining_count;$/;"	m	struct:_mosquitto_packet
 remaining_length	lib/mosquitto_internal.h	/^	uint32_t remaining_length;$/;"	m	struct:_mosquitto_packet
@@ -3114,7 +2990,6 @@ sock_count	src/mosquitto_broker.h	/^	int sock_count;$/;"	m	struct:_mqtt3_listene
 sock_ok	test/broker/07-will-acl-denied.py	/^    sock_ok = mosq_test.do_client_connect(connect_packet_ok, connack_packet_ok, timeout=5, connack_error="connack ok")$/;"	v
 socket	lib/cpp/mosquittopp.cpp	/^int mosquittopp::socket()$/;"	f	class:mosqpp::mosquittopp
 socket	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def socket(self):$/;"	m	class:Mosquitto
-socket	lib/python/build/lib/mosquitto.py	/^    def socket(self):$/;"	m	class:Mosquitto
 socket	lib/python/mosquitto.py	/^    def socket(self):$/;"	m	class:Mosquitto
 sockpairR	lib/mosquitto_internal.h	/^	int sockpairR, sockpairW;$/;"	m	struct:mosquitto
 sockpairW	lib/mosquitto_internal.h	/^	int sockpairR, sockpairW;$/;"	m	struct:mosquitto
@@ -3218,7 +3093,6 @@ subs	test/qos.c	/^struct sub subs[3];$/;"	v	typeref:struct:sub
 subscribe	lib/cpp/mosquittopp.cpp	/^int mosquittopp::subscribe(int *mid, const char *sub, int qos)$/;"	f	class:mosqpp::mosquittopp
 subscribe	lib/jsws/mosquitto.js	/^	subscribe : function(topic, qos)$/;"	m	class:Mosquitto
 subscribe	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def subscribe(self, topic, qos=0):$/;"	m	class:Mosquitto
-subscribe	lib/python/build/lib/mosquitto.py	/^    def subscribe(self, topic, qos=0):$/;"	m	class:Mosquitto
 subscribe	lib/python/mosquitto.py	/^    def subscribe(self, topic, qos=0):$/;"	m	class:Mosquitto
 subscribe2_packet	test/broker/06-bridge-b2br-disconnect-qos1.py	/^subscribe2_packet = mosq_test.gen_subscribe(mid, "bridge\/#", 1)$/;"	v
 subscribe2_packet	test/broker/06-bridge-b2br-disconnect-qos2.py	/^subscribe2_packet = mosq_test.gen_subscribe(mid, "bridge\/#", 2)$/;"	v
@@ -3260,7 +3134,7 @@ subscribe_packet	test/lib/02-subscribe-qos2.py	/^subscribe_packet = mosq_test.ge
 subscription_count	src/mosquitto_broker.h	/^	int subscription_count;$/;"	m	struct:mosquitto_db
 sys_interval	src/mosquitto_broker.h	/^	int sys_interval;$/;"	m	struct:mqtt3_config
 syslog_h	src/logging.c	/^HANDLE syslog_h;$/;"	v
-t	protect/conn_test.py	/^t = 1.0\/d$/;"	v
+t	protect/conn_test.py	/^t = 10\/d$/;"	v
 t	protect/err_pro_test.py	/^t = 10.0\/d$/;"	v
 t	protect/err_topic_test.py	/^t = 10.0\/d$/;"	v
 t	protect/pub0_retain.py	/^t = 10.0\/d$/;"	v
@@ -3292,7 +3166,6 @@ tls_insecure	lib/mosquitto_internal.h	/^	bool tls_insecure;$/;"	m	struct:mosquit
 tls_insecure	src/mosquitto_broker.h	/^	bool tls_insecure;$/;"	m	struct:_mqtt3_bridge
 tls_insecure_set	lib/cpp/mosquittopp.cpp	/^int mosquittopp::tls_insecure_set(bool value)$/;"	f	class:mosqpp::mosquittopp
 tls_insecure_set	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def tls_insecure_set(self, value):$/;"	m	class:Mosquitto
-tls_insecure_set	lib/python/build/lib/mosquitto.py	/^    def tls_insecure_set(self, value):$/;"	m	class:Mosquitto
 tls_insecure_set	lib/python/mosquitto.py	/^    def tls_insecure_set(self, value):$/;"	m	class:Mosquitto
 tls_keyfile	lib/mosquitto_internal.h	/^	char *tls_keyfile;$/;"	m	struct:mosquitto
 tls_keyfile	src/mosquitto_broker.h	/^	char *tls_keyfile;$/;"	m	struct:_mqtt3_bridge
@@ -3305,7 +3178,6 @@ tls_psk_set	lib/cpp/mosquittopp.cpp	/^int mosquittopp::tls_psk_set(const char *p
 tls_pw_callback	lib/mosquitto_internal.h	/^	int (*tls_pw_callback)(char *buf, int size, int rwflag, void *userdata);$/;"	m	struct:mosquitto
 tls_set	lib/cpp/mosquittopp.cpp	/^int mosquittopp::tls_set(const char *cafile, const char *capath, const char *certfile, const char *keyfile, int (*pw_callback)(char *buf, int size, int rwflag, void *userdata))$/;"	f	class:mosqpp::mosquittopp
 tls_set	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def tls_set(self, ca_certs, certfile=None, keyfile=None, cert_reqs=ssl.CERT_REQUIRED, tls_version=ssl.PROTOCOL_TLSv1, ciphers=None):$/;"	m	class:Mosquitto
-tls_set	lib/python/build/lib/mosquitto.py	/^    def tls_set(self, ca_certs, certfile=None, keyfile=None, cert_reqs=ssl.CERT_REQUIRED, tls_version=ssl.PROTOCOL_TLSv1, ciphers=None):$/;"	m	class:Mosquitto
 tls_set	lib/python/mosquitto.py	/^    def tls_set(self, ca_certs, certfile=None, keyfile=None, cert_reqs=ssl.CERT_REQUIRED, tls_version=ssl.PROTOCOL_TLSv1, ciphers=None):$/;"	m	class:Mosquitto
 tls_version	lib/mosquitto_internal.h	/^	char *tls_version;$/;"	m	struct:mosquitto
 tls_version	src/mosquitto_broker.h	/^	char *tls_version;$/;"	m	struct:_mqtt3_bridge
@@ -3334,7 +3206,6 @@ topic_count	client/sub_client.c	/^	int topic_count;$/;"	m	struct:userdata	file:
 topic_count	src/mosquitto_broker.h	/^	int topic_count;$/;"	m	struct:_mqtt3_bridge
 topic_matches_sub	lib/cpp/mosquittopp.cpp	/^int topic_matches_sub(const char *sub, const char *topic, bool *result)$/;"	f	namespace:mosqpp
 topic_matches_sub	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^def topic_matches_sub(sub, topic):$/;"	f
-topic_matches_sub	lib/python/build/lib/mosquitto.py	/^def topic_matches_sub(sub, topic):$/;"	f
 topic_matches_sub	lib/python/mosquitto.py	/^def topic_matches_sub(sub, topic):$/;"	f
 topic_qos	client/sub_client.c	/^	int topic_qos;$/;"	m	struct:userdata	file:
 topic_remapping	src/mosquitto_broker.h	/^	bool topic_remapping;$/;"	m	struct:_mqtt3_bridge
@@ -3362,7 +3233,6 @@ unsuback_packet	test/lib/02-unsubscribe.py	/^unsuback_packet = mosq_test.gen_uns
 unsubscribe	lib/cpp/mosquittopp.cpp	/^int mosquittopp::unsubscribe(int *mid, const char *sub)$/;"	f	class:mosqpp::mosquittopp
 unsubscribe	lib/jsws/mosquitto.js	/^	unsubscribe : function(topic)$/;"	m	class:Mosquitto
 unsubscribe	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def unsubscribe(self, topic):$/;"	m	class:Mosquitto
-unsubscribe	lib/python/build/lib/mosquitto.py	/^    def unsubscribe(self, topic):$/;"	m	class:Mosquitto
 unsubscribe	lib/python/mosquitto.py	/^    def unsubscribe(self, topic):$/;"	m	class:Mosquitto
 unsubscribe_packet	test/broker/02-unsubscribe-qos0.py	/^unsubscribe_packet = mosq_test.gen_unsubscribe(mid, "qos0\/test")$/;"	v
 unsubscribe_packet	test/broker/02-unsubscribe-qos1.py	/^unsubscribe_packet = mosq_test.gen_unsubscribe(mid, "qos1\/test")$/;"	v
@@ -3380,7 +3250,6 @@ user	src/mosquitto_broker.h	/^	char *user;$/;"	m	struct:mqtt3_config
 user_data	src/mosquitto_broker.h	/^	void *user_data;$/;"	m	struct:_mosquitto_auth_plugin
 user_data_set	lib/cpp/mosquittopp.cpp	/^void mosquittopp::user_data_set(void *userdata)$/;"	f	class:mosqpp::mosquittopp
 user_data_set	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def user_data_set(self, userdata):$/;"	m	class:Mosquitto
-user_data_set	lib/python/build/lib/mosquitto.py	/^    def user_data_set(self, userdata):$/;"	m	class:Mosquitto
 user_data_set	lib/python/mosquitto.py	/^    def user_data_set(self, userdata):$/;"	m	class:Mosquitto
 userdata	client/sub_client.c	/^struct userdata {$/;"	s	file:
 userdata	lib/mosquitto_internal.h	/^	void *userdata;$/;"	m	struct:mosquitto
@@ -3392,7 +3261,6 @@ username	src/mosquitto_broker.h	/^	char *username;$/;"	m	struct:_mosquitto_unpwd
 username	src/mosquitto_broker.h	/^	char *username;$/;"	m	struct:_mqtt3_bridge
 username_pw_set	lib/cpp/mosquittopp.cpp	/^int mosquittopp::username_pw_set(const char *username, const char *password)$/;"	f	class:mosqpp::mosquittopp
 username_pw_set	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def username_pw_set(self, username, password=None):$/;"	m	class:Mosquitto
-username_pw_set	lib/python/build/lib/mosquitto.py	/^    def username_pw_set(self, username, password=None):$/;"	m	class:Mosquitto
 username_pw_set	lib/python/mosquitto.py	/^    def username_pw_set(self, username, password=None):$/;"	m	class:Mosquitto
 uthash_expand_fyi	src/uthash.h	83;"	d
 uthash_fatal	src/uthash.h	70;"	d
@@ -3406,18 +3274,15 @@ version	lib/python/setup.py	/^	version='1.3.1',$/;"	v
 want_write	lib/cpp/mosquittopp.cpp	/^bool mosquittopp::want_write()$/;"	f	class:mosqpp::mosquittopp
 want_write	lib/mosquitto_internal.h	/^	bool want_write;$/;"	m	struct:mosquitto
 want_write	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def want_write(self):$/;"	m	class:Mosquitto
-want_write	lib/python/build/lib/mosquitto.py	/^    def want_write(self):$/;"	m	class:Mosquitto
 want_write	lib/python/mosquitto.py	/^    def want_write(self):$/;"	m	class:Mosquitto
 will	lib/mosquitto_internal.h	/^	struct mosquitto_message *will;$/;"	m	struct:mosquitto	typeref:struct:mosquitto::mosquitto_message
 will	test/broker/07-will-null.py	/^        will = subprocess.Popen(['.\/07-will-null-helper.py'])$/;"	v
 will	test/broker/07-will-qos0.py	/^        will = subprocess.Popen(['.\/07-will-qos0-helper.py'])$/;"	v
 will_clear	lib/cpp/mosquittopp.cpp	/^int mosquittopp::will_clear()$/;"	f	class:mosqpp::mosquittopp
 will_clear	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def will_clear(self):$/;"	m	class:Mosquitto
-will_clear	lib/python/build/lib/mosquitto.py	/^    def will_clear(self):$/;"	m	class:Mosquitto
 will_clear	lib/python/mosquitto.py	/^    def will_clear(self):$/;"	m	class:Mosquitto
 will_set	lib/cpp/mosquittopp.cpp	/^int mosquittopp::will_set(const char *topic, int payloadlen, const void *payload, int qos, bool retain)$/;"	f	class:mosqpp::mosquittopp
 will_set	lib/python/build/lib.linux-i686-2.7/mosquitto.py	/^    def will_set(self, topic, payload=None, qos=0, retain=False):$/;"	m	class:Mosquitto
-will_set	lib/python/build/lib/mosquitto.py	/^    def will_set(self, topic, payload=None, qos=0, retain=False):$/;"	m	class:Mosquitto
 will_set	lib/python/mosquitto.py	/^    def will_set(self, topic, payload=None, qos=0, retain=False):$/;"	m	class:Mosquitto
 write_e	src/persist.h	46;"	d
 ws	lib/jsws/mosquitto.js	/^		this.ws.onerror = function(evt){$/;"	m	class:connect

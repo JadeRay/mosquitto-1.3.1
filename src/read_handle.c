@@ -219,6 +219,8 @@ int mqtt3_handle_publish(struct mosquitto_db *db, struct mosquitto *context)
 		topic = topic_mount;
 	}
 
+	
+
 	if(payloadlen){
 		if(db->config->message_size_limit && payloadlen > db->config->message_size_limit){
 			_mosquitto_log_printf(NULL, MOSQ_LOG_DEBUG, "Dropped too large PUBLISH from %s (d%d, q%d, r%d, m%d, '%s', ... (%ld bytes))", context->id, dup, qos, retain, mid, topic, (long)payloadlen);
@@ -235,13 +237,31 @@ int mqtt3_handle_publish(struct mosquitto_db *db, struct mosquitto *context)
 			return 1;
 		}
 	}
+#ifdef modify
+	
+	char protect_topic[256];
+	snprintf(protect_topic, 256, "$SYS/protect/rep/%s", context->id);
+	mqtt3_db_messages_easy_queue(db, NULL, protect_topic, 2, payloadlen, payload, 1);
+	_mosquitto_log_printf(NULL, MOSQ_LOG_DEBUG, "Pub to topic %s payload:%s", protect_topic, (char*)payload);
+    
+	protect_topic[0] = '\0';
+	snprintf(protect_topic, 256, "$SYS/protect/rp/%s", context->id);
+	mqtt3_db_messages_easy_queue(db, NULL, protect_topic, 2, 1, "1", 1);
+
+	_mosquitto_log_printf(NULL, MOSQ_LOG_DEBUG, "Pub to topic %s payload:1", protect_topic);
+	protect_topic[0] = '\0';
+	if(strncmp(topic, "/test/normal", 12)){
+	    snprintf(protect_topic, 256, "$SYS/protect/rao/%s", context->id);
+	    mqtt3_db_messages_easy_queue(db, NULL, protect_topic, 2, 1, "1", 1);
+
+	    _mosquitto_log_printf(NULL, MOSQ_LOG_DEBUG, "Pub to topic %s payload:1", protect_topic);
+	}
+
+#endif
 
 	/* Check for topic access */
 	rc = mosquitto_acl_check(db, context, topic, MOSQ_ACL_WRITE);
 	if(rc == MOSQ_ERR_ACL_DENIED){
-#ifdef modify
-		g_protect_err_topic ++;
-#endif
 		_mosquitto_log_printf(NULL, MOSQ_LOG_DEBUG, "Denied PUBLISH from %s (d%d, q%d, r%d, m%d, '%s', ... (%ld bytes))", context->id, dup, qos, retain, mid, topic, (long)payloadlen);
 		goto process_bad_message;
 	}else if(rc != MOSQ_ERR_SUCCESS){
@@ -250,15 +270,7 @@ int mqtt3_handle_publish(struct mosquitto_db *db, struct mosquitto *context)
 		return rc;
 	}
 
-	char* topic_pattern = "/u/";
-	int topic_pattern_len = 3;
-	char* payload_pattern = "AA07";
-	int payload_pattern_len = 4;
 
-	if(strncmp(topic, topic_pattern, topic_pattern_len)) g_protect_err_topic ++;
-	if(strncmp(payload, payload_pattern, payload_pattern_len)) g_protect_err_protocol ++;
-
-	g_protect_pub_freq ++;
 	_mosquitto_log_printf(NULL, MOSQ_LOG_DEBUG, "Received PUBLISH from %s (d%d, q%d, r%d, m%d, '%s', ... (%ld bytes))", context->id, dup, qos, retain, mid, topic, (long)payloadlen);
 	if(qos > 0){
 		mqtt3_db_message_store_find(context, mid, &stored);
@@ -275,15 +287,9 @@ int mqtt3_handle_publish(struct mosquitto_db *db, struct mosquitto *context)
 	}
 	switch(qos){
 		case 0:
-#ifdef modify
-			g_protect_pub_freq_0 ++;
-#endif
 			if(mqtt3_db_messages_queue(db, context->id, topic, qos, retain, stored)) rc = 1;
 			break;
 		case 1:
-#ifdef modify
-			g_protect_pub_freq_1 ++;
-#endif
 			if(mqtt3_db_messages_queue(db, context->id, topic, qos, retain, stored)) rc = 1;
 			if(_mosquitto_send_puback(context, mid)) rc = 1;
 			break;
@@ -300,9 +306,6 @@ int mqtt3_handle_publish(struct mosquitto_db *db, struct mosquitto *context)
 			}else if(res == 1){
 				rc = 1;
 			}
-#ifdef modify
-			g_protect_pub_freq_2 ++;
-#endif
 			break;
 	}
 	_mosquitto_free(topic);

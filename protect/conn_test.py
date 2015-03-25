@@ -5,18 +5,23 @@ import time
 import sys, getopt
 
 host = "localhost"
-opts, args = getopt.getopt(sys.argv[1:], "h:")
+opts, args = getopt.getopt(sys.argv[1:], "h:n:")
 
 #client.connect (host, 1883, 60)
 
 for op, value in opts:
     if op == "-h":
-        d = int(value)
+        div = int(value)
+    else if op == "-n":
+	num = int(value)
+    else:
+	pass
     
-t = 10/d
+t = 1.0/div
 while True:
-    client = mqtt.Client("conn_test", True)
-    client.username_pw_set("neo", "123456")
+    
+    client = mqtt.Client("Client"+str(num), True)
+    client.username_pw_set("client"+str(num), "123456")
     client.connect(host, 1883, 60)
     client.disconnect()
     time.sleep(t)
